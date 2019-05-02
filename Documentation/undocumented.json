@@ -1,0 +1,152 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/syoung2/Documents/AppleCode/MotorControl-iOS/MotorControl/MotorControl/MCTFactory.swift",
+      "line": 37,
+      "symbol": "RSDStepType.handSelection",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/syoung2/Documents/AppleCode/MotorControl-iOS/MotorControl/MotorControl/MCTFactory.swift",
+      "line": 38,
+      "symbol": "RSDStepType.handInstruction",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/syoung2/Documents/AppleCode/MotorControl-iOS/MotorControl/MotorControl/MCTFactory.swift",
+      "line": 43,
+      "symbol": "MCTFactory",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/syoung2/Documents/AppleCode/MotorControl-iOS/MotorControl/MotorControl/MCTTaskInfo.swift",
+      "line": 58,
+      "symbol": "MCTTaskIdentifier.identifier",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/syoung2/Documents/AppleCode/MotorControl-iOS/MotorControl/MotorControl/MCTTaskInfo.swift",
+      "line": 158,
+      "symbol": "MCTTaskTransformer.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/syoung2/Documents/AppleCode/MotorControl-iOS/MotorControl/MotorControl/ResultObjects/MCTTappingResultObject.swift",
+      "line": 132,
+      "symbol": "MCTTappingButtonIdentifier.left",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/syoung2/Documents/AppleCode/MotorControl-iOS/MotorControl/MotorControl/ResultObjects/MCTTappingResultObject.swift",
+      "line": 132,
+      "symbol": "MCTTappingButtonIdentifier.none",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/syoung2/Documents/AppleCode/MotorControl-iOS/MotorControl/MotorControl/ResultObjects/MCTTappingResultObject.swift",
+      "line": 132,
+      "symbol": "MCTTappingButtonIdentifier.right",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/syoung2/Documents/AppleCode/MotorControl-iOS/MotorControl/MotorControl/StepObjects/MCTHandSelectionStepObject.swift",
+      "line": 39,
+      "symbol": "MCTHandSelectionStepObject.instantiateDataSource(with:for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/syoung2/Documents/AppleCode/MotorControl-iOS/MotorControl/MotorControl/StepObjects/MCTHandSelectionStepObject.swift",
+      "line": 46,
+      "symbol": "MCTHandSelection.both",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/syoung2/Documents/AppleCode/MotorControl-iOS/MotorControl/MotorControl/StepObjects/MCTHandSelectionStepObject.swift",
+      "line": 46,
+      "symbol": "MCTHandSelection.left",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/syoung2/Documents/AppleCode/MotorControl-iOS/MotorControl/MotorControl/StepObjects/MCTHandSelectionStepObject.swift",
+      "line": 46,
+      "symbol": "MCTHandSelection.right",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/syoung2/Documents/AppleCode/MotorControl-iOS/MotorControl/MotorControl/StepObjects/MCTHandSelectionStepObject.swift",
+      "line": 48,
+      "symbol": "MCTHandSelection.otherHand",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/syoung2/Documents/AppleCode/MotorControl-iOS/MotorControl/MotorControl/ViewControllers/MCTActiveStepViewController.swift",
+      "line": 36,
+      "symbol": "MCTActiveStepViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/syoung2/Documents/AppleCode/MotorControl-iOS/MotorControl/MotorControl/ViewControllers/MCTCompletionStepViewController.swift",
+      "line": 36,
+      "symbol": "MCTCompletionStepViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/syoung2/Documents/AppleCode/MotorControl-iOS/MotorControl/MotorControl/ViewControllers/MCTCountdownStepViewController.swift",
+      "line": 36,
+      "symbol": "MCTCountdownStepViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/syoung2/Documents/AppleCode/MotorControl-iOS/MotorControl/MotorControl/ViewControllers/MCTHandInstructionStepViewController.swift",
+      "line": null,
+      "symbol": "MCTHandStepController",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/syoung2/Documents/AppleCode/MotorControl-iOS/MotorControl/MotorControl/ViewControllers/MCTHandInstructionStepViewController.swift",
+      "line": 36,
+      "symbol": "MCTHandStepController",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/syoung2/Documents/AppleCode/MotorControl-iOS/MotorControl/MotorControl/ViewControllers/MCTHandInstructionStepViewController.swift",
+      "line": 132,
+      "symbol": "MCTHandInstructionStepViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/syoung2/Documents/AppleCode/MotorControl-iOS/MotorControl/MotorControl/ViewControllers/MCTTappingCompletionStepViewController.swift",
+      "line": 36,
+      "symbol": "MCTTappingCompletionStepViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/syoung2/Documents/AppleCode/MotorControl-iOS/MotorControl/MotorControl/Views/MCTTapButton.swift",
+      "line": 36,
+      "symbol": "MCTTapButton",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/syoung2/Documents/AppleCode/MotorControl-iOS"
+}

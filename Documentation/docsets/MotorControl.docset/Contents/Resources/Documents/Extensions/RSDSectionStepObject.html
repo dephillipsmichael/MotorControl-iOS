@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RSDSectionStepObject Extension Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Extension/RSDSectionStepObject" class="dashAnchor"></a>
+    <a title="RSDSectionStepObject Extension Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">MotorControl Docs</a></p>
+        <p class="header-right"><a href="https://github.com/Sage-Bionetworks/MotorControl-iOS.git"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">MotorControl Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        RSDSectionStepObject Extension Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/MCTHandInstructionStepObject.html">MCTHandInstructionStepObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MCTHandSelectionDataSource.html">MCTHandSelectionDataSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:12MotorControl26MCTHandSelectionStepObjectC">MCTHandSelectionStepObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MCTTappingStepObject.html">MCTTappingStepObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MCTTappingStepViewController.html">MCTTappingStepViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums.html#/s:12MotorControl16MCTHandSelectionO">MCTHandSelection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums.html#/s:12MotorControl26MCTTappingButtonIdentifierO">MCTTappingButtonIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/MCTTaskIdentifier.html">MCTTaskIdentifier</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/RSDResultType.html">RSDResultType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/RSDSectionStepObject.html">RSDSectionStepObject</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/MCTTappingResultObject.html">MCTTappingResultObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MCTTappingSample.html">MCTTappingSample</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MCTTaskGroup.html">MCTTaskGroup</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MCTTaskInfo.html">MCTTaskInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MCTTaskTransformer.html">MCTTaskTransformer</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>RSDSectionStepObject</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">RSDSectionStepObject</span> <span class="p">:</span> <span class="kt">RSDSectionStep</span><span class="p">,</span> <span class="kt">RSDConditionalStepNavigator</span><span class="p">,</span> <span class="kt">RSDStepValidator</span><span class="p">,</span> <span class="kt">RSDCopyStep</span><span class="p">,</span> <span class="kt">Decodable</span></code></pre>
+
+                </div>
+              </div>
+            <p>Extend RSDSectionStepObject to implement navigation rules for each hand. These sections are
+intended to be used when a study has results from the left and right side of the body, and
+needs to randomize which order tests are done in.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Research20RSDSectionStepObjectV12MotorControlE010shouldSkipC04with9isPeekingSbAA13RSDTaskResult_pSg_SbtF"></a>
+                    <a name="//apple_ref/swift/Method/shouldSkipStep(with:isPeeking:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Research20RSDSectionStepObjectV12MotorControlE010shouldSkipC04with9isPeekingSbAA13RSDTaskResult_pSg_SbtF">shouldSkipStep(with:isPeeking:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns <code>true</code> if this step should be skipped and <code>false</code> otherwise.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldSkipStep</span><span class="p">(</span><span class="n">with</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">RSDTaskResult</span><span class="p">?,</span> <span class="nv">isPeeking</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Research20RSDSectionStepObjectV12MotorControlE04nextC10Identifier4with9isPeekingSSSgAA13RSDTaskResult_pSg_SbtF"></a>
+                    <a name="//apple_ref/swift/Method/nextStepIdentifier(with:isPeeking:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Research20RSDSectionStepObjectV12MotorControlE04nextC10Identifier4with9isPeekingSSSgAA13RSDTaskResult_pSg_SbtF">nextStepIdentifier(with:isPeeking:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the identifier of the step to go to after this step is completed, or skipped.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">nextStepIdentifier</span><span class="p">(</span><span class="n">with</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">RSDTaskResult</span><span class="p">?,</span> <span class="nv">isPeeking</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017-2019 <a class="link" href="https://developer.sagebridge.org" target="_blank" rel="external">Sage Bionetworks</a>. All rights reserved.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
