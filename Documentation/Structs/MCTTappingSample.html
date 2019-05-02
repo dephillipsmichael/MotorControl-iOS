@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MCTTappingSample Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Struct/MCTTappingSample" class="dashAnchor"></a>
+    <a title="MCTTappingSample Structure Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">MotorControl Docs</a></p>
+        <p class="header-right"><a href="https://github.com/Sage-Bionetworks/MotorControl-iOS.git"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">MotorControl Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        MCTTappingSample Structure Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/MCTHandInstructionStepObject.html">MCTHandInstructionStepObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MCTHandSelectionDataSource.html">MCTHandSelectionDataSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:12MotorControl26MCTHandSelectionStepObjectC">MCTHandSelectionStepObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MCTTappingStepObject.html">MCTTappingStepObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MCTTappingStepViewController.html">MCTTappingStepViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums.html#/s:12MotorControl16MCTHandSelectionO">MCTHandSelection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums.html#/s:12MotorControl26MCTTappingButtonIdentifierO">MCTTappingButtonIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/MCTTaskIdentifier.html">MCTTaskIdentifier</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/RSDResultType.html">RSDResultType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/RSDSectionStepObject.html">RSDSectionStepObject</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/MCTTappingResultObject.html">MCTTappingResultObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MCTTappingSample.html">MCTTappingSample</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MCTTaskGroup.html">MCTTaskGroup</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MCTTaskInfo.html">MCTTaskInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MCTTaskTransformer.html">MCTTaskTransformer</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>MCTTappingSample</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">MCTTappingSample</span> <span class="p">:</span> <span class="kt">RSDSampleRecord</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+
+                </div>
+              </div>
+            <p>The <code>MCTTappingSample</code> class represents a single tap on a button.</p>
+
+<p>The tapping sample object records the location of the tap, the
+button that was tapped, and the time at which the event occurred. A tapping sample is
+included in an <code><a href="../Structs/MCTTappingResultObject.html">MCTTappingResultObject</a></code> object, and is recorded by the
+step view controller for the corresponding task when a tap is
+recognized.</p>
+
+<p>A tapping sample is typically generated by the framework as the task proceeds. When the task
+completes, it may be appropriate to serialize the sample for transmission to a server,
+or to immediately perform analysis on it.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MotorControl16MCTTappingSampleV6uptimeSdvp"></a>
+                    <a name="//apple_ref/swift/Property/uptime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MotorControl16MCTTappingSampleV6uptimeSdvp">uptime</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Clock time for the sample.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">uptime</span><span class="p">:</span> <span class="kt">TimeInterval</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MotorControl16MCTTappingSampleV9timestampSdSgvp"></a>
+                    <a name="//apple_ref/swift/Property/timestamp" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MotorControl16MCTTappingSampleV9timestampSdSgvp">timestamp</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A relative timestamp indicating the time of the tap event.</p>
+
+<p>The timestamp is relative to the value of <code>startDate</code> in the <code>RSDResult</code> object that includes this
+sample.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">timestamp</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MotorControl16MCTTappingSampleV8stepPathSSvp"></a>
+                    <a name="//apple_ref/swift/Property/stepPath" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MotorControl16MCTTappingSampleV8stepPathSSvp">stepPath</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The current step path.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">stepPath</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MotorControl16MCTTappingSampleV16buttonIdentifierAA0c6ButtonF0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/buttonIdentifier" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MotorControl16MCTTappingSampleV16buttonIdentifierAA0c6ButtonF0Ovp">buttonIdentifier</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An enumerated value that indicates which button was tapped, if any.</p>
+
+<p>If the value of this property is <code>.none</code>, it indicates that the tap was near, but not inside, one
+of the target buttons.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">buttonIdentifier</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/s:12MotorControl26MCTTappingButtonIdentifierO">MCTTappingButtonIdentifier</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MotorControl16MCTTappingSampleV8locationSo7CGPointVvp"></a>
+                    <a name="//apple_ref/swift/Property/location" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MotorControl16MCTTappingSampleV8locationSo7CGPointVvp">location</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The location of the tap within the step&rsquo;s view.</p>
+
+<p>The location coordinates are relative to a rectangle whose size corresponds to
+the <code>stepViewSize</code> in the enclosing <code><a href="../Structs/MCTTappingResultObject.html">MCTTappingResultObject</a></code> object.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">location</span><span class="p">:</span> <span class="kt">CGPoint</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MotorControl16MCTTappingSampleV8durationSdvp"></a>
+                    <a name="//apple_ref/swift/Property/duration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MotorControl16MCTTappingSampleV8durationSdvp">duration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A duration of the tap event.</p>
+
+<p>The duration store time interval between touch down and touch release events.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">internal(set)</span> <span class="k">var</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt">TimeInterval</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MotorControl16MCTTappingSampleV13timestampDate10Foundation0F0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/timestampDate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MotorControl16MCTTappingSampleV13timestampDate10Foundation0F0VSgvp">timestampDate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Ignored.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">timestampDate</span><span class="p">:</span> <span class="nf">Date</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017-2019 <a class="link" href="https://developer.sagebridge.org" target="_blank" rel="external">Sage Bionetworks</a>. All rights reserved.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
