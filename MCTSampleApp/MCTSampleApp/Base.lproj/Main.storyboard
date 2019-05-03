@@ -31,7 +31,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="286" height="73.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="activityIcon" translatesAutoresizingMaskIntoConstraints="NO" id="hht-jI-0BA">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hht-jI-0BA">
                                             <rect key="frame" x="16" y="11" width="52" height="52"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="hht-jI-0BA" secondAttribute="height" multiplier="1:1" id="TQa-Pb-EWT"/>
@@ -426,9 +426,6 @@
             <point key="canvasLocation" x="769" y="124"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="activityIcon" width="64" height="64"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="fcz-MD-Lm5"/>
     </inferredMetricsTieBreakers>

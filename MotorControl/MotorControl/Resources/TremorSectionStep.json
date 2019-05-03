@@ -18,7 +18,7 @@
                     "image":{
                         "type":"fetchable",
                         "imageName":"HoldPhone-Left",
-                        "placementType":"topMarginBackground"
+                        "placementType":"topBackground"
                     },
                     "actions":{
                         "goForward":{
@@ -71,7 +71,7 @@
                           "skipToIdentifier":"tremor",
                           "buttonTitle": "Restart test"
                       },
-                      "learnMore":{
+                      "reviewInstructions":{
                           "type":"navigation",
                           "skipToIdentifier": "holdPhoneInstructions",
                           "buttonTitle": "Review instructions"
