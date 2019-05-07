@@ -16,12 +16,12 @@
                                 "optional":true
                                }
                             ],
-                 "image":{
-                     "type":"animated",
-                     "imageNames":["TapLeft1", "TapLeft2"],
-                     "placementType":"topBackground",
-                     "animationDuration": 1
-                 },
+                "image":{
+                    "type":"animated",
+                    "imageNames":["TapLeft1", "TapLeft2", "TapLeft3", "TapLeft4"],
+                    "placementType":"topBackground",
+                    "animationDuration": 2
+                },
                 "icons": [
                           {
                             "icon":"FlatSurface",
@@ -46,9 +46,9 @@
                 "text":"Speed of finger tapping can reflect severity of motor symptoms in Parkinson’s disease. This activity measures your tapping speed for each hand. Your medical provider may measure this differently.",
                 "image":{
                      "type":"animated",
-                     "imageNames":["TapLeft1", "TapLeft2"],
+                     "imageNames":["TapLeft1", "TapLeft2", "TapLeft3", "TapLeft4"],
                      "placementType":"topBackground",
-                     "animationDuration": 1
+                     "animationDuration": 2
                 },
                 "actions":{
                     "goForward":{
@@ -105,11 +105,11 @@
                 "type":"handInstruction",
                 "title":"First, tap with your %@ hand",
                 "text": "Alternate tapping the buttons that appear with your index and middle finger of your %@ HAND. Keep tapping for 30 seconds for as fast as you can.",
-                "image": {
+                "image":{
                     "type":"animated",
-                    "imageNames": ["TapLeft1", "TapLeft2"],
-                    "animationDuration": 1.0,
-                    "placementType": "topBackground"
+                    "imageNames":["TapLeft1", "TapLeft2", "TapLeft3", "TapLeft4"],
+                    "placementType":"topBackground",
+                    "animationDuration": 2
                 },
                 "actions":{
                     "goForward":{
