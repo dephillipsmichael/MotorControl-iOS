@@ -38,17 +38,17 @@ extension RSDStepType {
     public static let handInstruction: RSDStepType = "handInstruction"
 }
 
-fileprivate var _didAddLocalizationBundle: Bool = false
+fileprivate var _didLoad: Bool = false
 
 open class MCTFactory : RSDFactory {
     
-    /// The default color palette for this module is royal500, butterscotch500 without an accent color.
-    /// The design system is set as version 0.
+    /// The default color palette for this module is Royal 300, Butterscotch 300, Turquoise 300
+    /// The design system is set as version 1.
     public static let designSystem: RSDDesignSystem = {
         let primary = RSDColorMatrix.shared.colorKey(for: .palette(.royal), shade: .medium)
         let secondary = RSDColorMatrix.shared.colorKey(for: .palette(.butterscotch), shade: .medium)
         let accent = RSDColorMatrix.shared.colorKey(for: .palette(.turquoise), shade: .medium)
-        let palette = RSDColorPalette(version: 1, primary: primary, secondary: secondary, accent: primary)
+        let palette = RSDColorPalette(version: 1, primary: primary, secondary: secondary, accent: accent)
         return RSDDesignSystem(palette: palette)
     }()
     
@@ -56,11 +56,15 @@ open class MCTFactory : RSDFactory {
     public override init() {
         super.init()
         
-        // Add the localization bundle if this is a first init()
-        if !_didAddLocalizationBundle {
-            _didAddLocalizationBundle = true
+        if !_didLoad {
+            _didLoad = true
+            
+            // Add the localization bundle if this is a first init()
             let localizationBundle = LocalizationBundle(Bundle(for: MCTFactory.self))
             Localization.insert(bundle: localizationBundle, at: 1)
+            
+            // Register authorization handlers
+            RSDAuthorizationHandler.registerAdaptorIfNeeded(RSDMotionAuthorization.shared)
         }
     }
         

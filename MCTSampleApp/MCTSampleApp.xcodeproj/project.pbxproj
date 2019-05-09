@@ -24,8 +24,8 @@
 		F82CEF28227AB675000485C8 /* Research.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F82CEF26227AB675000485C8 /* Research.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F82CEF2A227AB675000485C8 /* ResearchUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F82CEF29227AB675000485C8 /* ResearchUI.framework */; };
 		F82CEF2B227AB675000485C8 /* ResearchUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F82CEF29227AB675000485C8 /* ResearchUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F82CEF2D227AB675000485C8 /* ResearchRecorders.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F82CEF2C227AB675000485C8 /* ResearchRecorders.framework */; };
-		F82CEF2E227AB675000485C8 /* ResearchRecorders.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F82CEF2C227AB675000485C8 /* ResearchRecorders.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F8E12677228E346400AE37E1 /* ResearchMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E12676228E346400AE37E1 /* ResearchMotion.framework */; };
+		F8E12678228E346400AE37E1 /* ResearchMotion.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F8E12676228E346400AE37E1 /* ResearchMotion.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +46,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				F82CEF25227AB675000485C8 /* MotorControl.framework in Embed Frameworks */,
-				F82CEF2E227AB675000485C8 /* ResearchRecorders.framework in Embed Frameworks */,
+				F8E12678228E346400AE37E1 /* ResearchMotion.framework in Embed Frameworks */,
 				F82CEF28227AB675000485C8 /* Research.framework in Embed Frameworks */,
 				F82CEF2B227AB675000485C8 /* ResearchUI.framework in Embed Frameworks */,
 			);
@@ -74,7 +74,7 @@
 		F82CEF23227AB675000485C8 /* MotorControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MotorControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F82CEF26227AB675000485C8 /* Research.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Research.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F82CEF29227AB675000485C8 /* ResearchUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ResearchUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F82CEF2C227AB675000485C8 /* ResearchRecorders.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ResearchRecorders.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8E12676228E346400AE37E1 /* ResearchMotion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ResearchMotion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +83,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F82CEF24227AB675000485C8 /* MotorControl.framework in Frameworks */,
-				F82CEF2D227AB675000485C8 /* ResearchRecorders.framework in Frameworks */,
+				F8E12677228E346400AE37E1 /* ResearchMotion.framework in Frameworks */,
 				F82CEF27227AB675000485C8 /* Research.framework in Frameworks */,
 				F82CEF2A227AB675000485C8 /* ResearchUI.framework in Frameworks */,
 			);
@@ -148,7 +148,7 @@
 		F82CEF22227AB61A000485C8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F82CEF2C227AB675000485C8 /* ResearchRecorders.framework */,
+				F8E12676228E346400AE37E1 /* ResearchMotion.framework */,
 				F82CEF29227AB675000485C8 /* ResearchUI.framework */,
 				F82CEF26227AB675000485C8 /* Research.framework */,
 				F82CEF23227AB675000485C8 /* MotorControl.framework */,
