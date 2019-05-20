@@ -14,9 +14,9 @@
 		F813D6FF21BB416C00795664 /* MCTFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F813D6FD21BB416C00795664 /* MCTFactory.swift */; };
 		F813D70E21BB419E00795664 /* NavigationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F813D70C21BB419D00795664 /* NavigationTests.swift */; };
 		F813D70F21BB419E00795664 /* ResourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F813D70D21BB419E00795664 /* ResourceTests.swift */; };
-		F82CEF31227AB68A000485C8 /* ResearchRecorders.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F82CEF30227AB68A000485C8 /* ResearchRecorders.framework */; };
 		F837224B223320B400C9A2EA /* MCTHandInstructionStepObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F837224A223320B400C9A2EA /* MCTHandInstructionStepObject.swift */; };
 		F8C36BCB223881A3000E42A7 /* MCTTaskObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C36BCA223881A3000E42A7 /* MCTTaskObject.swift */; };
+		F8E12675228E344800AE37E1 /* ResearchMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E12674228E344800AE37E1 /* ResearchMotion.framework */; };
 		F8E3B7FA21BB45010004284E /* Research.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E3B7F921BB45010004284E /* Research.framework */; };
 		F8E3B7FC21BB450B0004284E /* ResearchUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E3B7FB21BB450B0004284E /* ResearchUI.framework */; };
 		F8E3B80821BB45630004284E /* Research_UnitTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E3B80721BB45630004284E /* Research_UnitTest.framework */; };
@@ -65,6 +65,7 @@
 		F82CEF30227AB68A000485C8 /* ResearchRecorders.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ResearchRecorders.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F837224A223320B400C9A2EA /* MCTHandInstructionStepObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCTHandInstructionStepObject.swift; sourceTree = "<group>"; };
 		F8C36BCA223881A3000E42A7 /* MCTTaskObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCTTaskObject.swift; sourceTree = "<group>"; };
+		F8E12674228E344800AE37E1 /* ResearchMotion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ResearchMotion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8E3B7F921BB45010004284E /* Research.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Research.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8E3B7FB21BB450B0004284E /* ResearchUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ResearchUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8E3B80721BB45630004284E /* Research_UnitTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Research_UnitTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,7 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F82CEF31227AB68A000485C8 /* ResearchRecorders.framework in Frameworks */,
+				F8E12675228E344800AE37E1 /* ResearchMotion.framework in Frameworks */,
 				F8E3B7FC21BB450B0004284E /* ResearchUI.framework in Frameworks */,
 				F8E3B7FA21BB45010004284E /* Research.framework in Frameworks */,
 			);
@@ -163,6 +164,7 @@
 		F8E3B7F821BB45010004284E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F8E12674228E344800AE37E1 /* ResearchMotion.framework */,
 				F82CEF30227AB68A000485C8 /* ResearchRecorders.framework */,
 				F8E3B80721BB45630004284E /* Research_UnitTest.framework */,
 				F8E3B7FB21BB450B0004284E /* ResearchUI.framework */,
