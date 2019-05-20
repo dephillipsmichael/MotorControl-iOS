@@ -18,7 +18,7 @@
                  "image":{
                      "type":"fetchable",
                      "imageName":"HoldPhone-Left",
-                     "placementType":"topMarginBackground"
+                     "placementType":"topBackground"
                  },
                 "icons": [
                           {
