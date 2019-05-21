@@ -69,6 +69,7 @@ public class MCTHandSelectionDataSource : RSDFormStepDataSourceObject {
     /// Override the initial result to look for the user's previous answer to this question in
     /// UserDefaults.
     override open var initialResult : RSDCollectionResult? {
+        // TODO: syoung 05/06/2019 Replace user defaults with data tracking.
         let defaults = UserDefaults.standard
         guard let handSelection = defaults.string(forKey: lastHandSelectionKey) else { return nil }
         var ret = self.instantiateCollectionResult()
