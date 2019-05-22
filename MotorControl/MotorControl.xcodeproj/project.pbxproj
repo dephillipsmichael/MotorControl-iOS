@@ -14,6 +14,7 @@
 		F813D6FF21BB416C00795664 /* MCTFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F813D6FD21BB416C00795664 /* MCTFactory.swift */; };
 		F813D70E21BB419E00795664 /* NavigationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F813D70C21BB419D00795664 /* NavigationTests.swift */; };
 		F813D70F21BB419E00795664 /* ResourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F813D70D21BB419E00795664 /* ResourceTests.swift */; };
+		F82A4A222295EC9D00BEBE3C /* MCTActiveStepObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82A4A212295EC9D00BEBE3C /* MCTActiveStepObject.swift */; };
 		F837224B223320B400C9A2EA /* MCTHandInstructionStepObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F837224A223320B400C9A2EA /* MCTHandInstructionStepObject.swift */; };
 		F8C36BCB223881A3000E42A7 /* MCTTaskObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C36BCA223881A3000E42A7 /* MCTTaskObject.swift */; };
 		F8E12675228E344800AE37E1 /* ResearchMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E12674228E344800AE37E1 /* ResearchMotion.framework */; };
@@ -62,6 +63,7 @@
 		F813D70B21BB419D00795664 /* MotorControlTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MotorControlTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		F813D70C21BB419D00795664 /* NavigationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationTests.swift; sourceTree = "<group>"; };
 		F813D70D21BB419E00795664 /* ResourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceTests.swift; sourceTree = "<group>"; };
+		F82A4A212295EC9D00BEBE3C /* MCTActiveStepObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCTActiveStepObject.swift; sourceTree = "<group>"; };
 		F82CEF30227AB68A000485C8 /* ResearchRecorders.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ResearchRecorders.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F837224A223320B400C9A2EA /* MCTHandInstructionStepObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCTHandInstructionStepObject.swift; sourceTree = "<group>"; };
 		F8C36BCA223881A3000E42A7 /* MCTTaskObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCTTaskObject.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				F8E3B82021BB46F00004284E /* MCTHandSelectionStepObject.swift */,
 				F8E3B81F21BB46F00004284E /* MCTSkippableSectionStepObject.swift */,
 				F837224A223320B400C9A2EA /* MCTHandInstructionStepObject.swift */,
+				F82A4A212295EC9D00BEBE3C /* MCTActiveStepObject.swift */,
 			);
 			path = StepObjects;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				F8E3B82E21BB472B0004284E /* MCTCompletionStepViewController.swift in Sources */,
 				F8E3B83021BB472B0004284E /* MCTHandInstructionStepViewController.swift in Sources */,
 				F8E3B83821BB474F0004284E /* MCTTapButton.swift in Sources */,
+				F82A4A222295EC9D00BEBE3C /* MCTActiveStepObject.swift in Sources */,
 				F8E3B82321BB46F00004284E /* MCTSkippableSectionStepObject.swift in Sources */,
 				F8E3B81C21BB46BA0004284E /* MCTTappingResultObject.swift in Sources */,
 				F813D6FE21BB416C00795664 /* MCTTaskInfo.swift in Sources */,

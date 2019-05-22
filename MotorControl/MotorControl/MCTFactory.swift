@@ -75,6 +75,8 @@ open class MCTFactory : RSDFactory {
             return try MCTHandSelectionStepObject(from: decoder)
         case .handInstruction:
             return try MCTHandInstructionStepObject(from: decoder)
+        case .countdown, .active:
+            return try MCTActiveStepObject(from: decoder)
         default:
             return try super.decodeStep(from: decoder, with: type)
         }

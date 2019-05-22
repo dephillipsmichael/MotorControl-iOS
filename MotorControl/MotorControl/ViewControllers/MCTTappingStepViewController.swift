@@ -37,7 +37,7 @@
 import UIKit
 
 /// Create a tapping step that will instantiate the tapping result and can load the storyboard view controller.
-public class MCTTappingStepObject: RSDActiveUIStepObject, RSDStepViewControllerVendor {
+public class MCTTappingStepObject: MCTActiveStepObject, RSDStepViewControllerVendor {
     
     /// Returns a new instance of a `MCTTappingResultObject`.
     public override func instantiateStepResult() -> RSDResult {

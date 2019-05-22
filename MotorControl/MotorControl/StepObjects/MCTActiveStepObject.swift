@@ -1,5 +1,5 @@
 //
-//  MCTTaskObject.swift
+//  MCTActiveStepObject.swift
 //  MotorControl
 //
 //  Copyright © 2019 Sage Bionetworks. All rights reserved.
@@ -33,32 +33,18 @@
 
 import Foundation
 
-/// For the MotorControl tasks, the motion sensors are
-class MCTTaskObject: RSDMotionTaskObject, RSDTaskDesign {
-
-    internal var runCount: Int = 1
+/// Create a subclass of the active step that always requires background audio and should end on interrupt.
+public class MCTActiveStepObject : RSDActiveUIStepObject {
     
-    /// Override the task setup to allow setting the run count.
-    override func setupTask(with data: RSDTaskData?, for path: RSDTaskPathComponent) {
-        guard let dictionary = data?.json as? [String : Any] else { return }
-        self.runCount = ((dictionary[RSDIdentifier.taskRunCount.stringValue] as? Int) ?? 0) + 1
-    }
-
-    /// Override the taskData builder to add the run count.
-    override func taskData(for taskResult: RSDTaskResult) -> RSDTaskData? {
-        let data = super.taskData(for: taskResult)
-        var json: [String : RSDJSONSerializable] = (data?.json as? [String : RSDJSONSerializable]) ?? [:]
-        json[RSDIdentifier.taskRunCount.stringValue] = runCount
-        return TaskData(identifier: self.identifier, timestampDate: taskResult.endDate, json: json)
+    /// Returns `true`.
+    public override var shouldEndOnInterrupt: Bool {
+        get { return true }
+        set {} // ignored
     }
     
-    struct TaskData : RSDTaskData {
-        let identifier: String
-        let timestampDate: Date?
-        let json: RSDJSONSerializable
-    }
-    
-    var designSystem: RSDDesignSystem {
-        return MCTFactory.designSystem
+    /// Returns `true`.
+    public override var requiresBackgroundAudio: Bool {
+        get { return true }
+        set {} // ignored
     }
 }
