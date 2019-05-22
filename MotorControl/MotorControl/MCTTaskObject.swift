@@ -33,7 +33,8 @@
 
 import Foundation
 
-/// For the MotorControl tasks, the motion sensors are
+/// For the MotorControl tasks, the motion sensors are always required. Because of this, inherit from
+/// `RSDMotionTaskObject` to use the custom audio session controller on that task.
 class MCTTaskObject: RSDMotionTaskObject, RSDTaskDesign {
 
     internal var runCount: Int = 1
