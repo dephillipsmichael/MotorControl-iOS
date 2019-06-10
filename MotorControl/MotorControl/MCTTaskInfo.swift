@@ -42,6 +42,9 @@ public enum MCTTaskIdentifier : String, Codable, CaseIterable {
     /// The tremor test.
     case tremor = "Tremor"
     
+    /// The kinetic tremor, or finger to nose, test.
+    case kineticTremor = "Kinetic Tremor"
+    
     /// The tapping test.
     case tapping = "Tapping"
     
@@ -161,6 +164,8 @@ public struct MCTTaskTransformer : RSDResourceTransformer, Decodable {
             self.resourceName = "Walk_And_Balance"
         case .tremor:
             self.resourceName = "Tremor"
+        case .kineticTremor:
+            self.resourceName = "Kinetic_Tremor"
         case .tapping:
             self.resourceName = "Finger_Tapping"
         case .walk30Seconds:
