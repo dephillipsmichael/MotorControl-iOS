@@ -34,7 +34,7 @@
 
 "TAP_BUTTON_TITLE" = "Tap"; // Accessibility title for the button tap
 
-"TAP_COUNT_LABEL" = "TAP COUNT";
+"TAP_COUNT_LABEL" = "Tap count";
 
 "ACTIVE_STEP_UNIT_LABEL" = "Seconds";
 
