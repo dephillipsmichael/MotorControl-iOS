@@ -20,8 +20,6 @@
                      "imageName":"FingerToNose9",
                      "placementType":"topBackground"
                  },
-                "videoResourceName": "instruction_video",
-                "videoBundleIdentifier": "org.sagebionetworks.MotorControl",
                 "icons": [
                           {
                             "icon":"SpaceToMoveYourArmsRose",
@@ -40,7 +38,11 @@
                     "skip":{
                         "type":"reminder",
                         "reminderIdentifier":"Kinetic Tremor"
-                    }
+                    },
+                    "moreInformation": {
+                        "type": "videoView",
+                        "buttonTitle" : "See this in action",
+                        "url" : "instruction_video.mp4" },
                  }
              },
              {
