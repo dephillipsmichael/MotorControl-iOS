@@ -94,7 +94,8 @@
                     "type":"animated",
                     "imageNames":["FingerToNose0", "FingerToNose1"],
                     "placementType":"topBackground",
-                    "animationDuration": 3
+                    "animationDuration": 4,
+                    "animationRepeatCount": 1
                 },
                 "actions":{
                     "goForward":{
@@ -129,7 +130,8 @@
                      "type":"animated",
                      "imageNames":["KineticHoldPhone-Left", "FingerToNose4", "FingerToNose5"],
                      "placementType":"topBackground",
-                     "animationDuration": 3
+                     "animationDuration": 4,
+                     "animationRepeatCount": 1
                  },
                  "actions":{
                      "goForward":{
