@@ -46,6 +46,23 @@
                  }
              },
              {
+                 "identifier":"eachHandInstructions",
+                 "type":"instruction",
+                 "title":"Each hand for 30 seconds",
+                 "text":"We will do this finger-to-nose motion repeatedly for 30 seconds with one hand, and do 30 seconds with your other hand.",
+                 "image":{
+                     "type":"fetchable",
+                     "imageName": "FingerToNose4",
+                     "placementType":"topBackground"
+                 },
+                 "actions":{
+                     "goForward":{
+                         "type":"default",
+                         "buttonTitle":"Got it"
+                     }
+                 }
+             },
+             {
                  "identifier": "handSelection",
                  "type": "handSelection",
                  "title": "Which hands are you capable of doing this task with?",
@@ -67,23 +84,6 @@
                          }
                      ]
                  }]
-             },
-             {
-                "identifier":"eachHandInstructions",
-                "type":"instruction",
-                "title":"Each hand for 30 seconds",
-                "text":"We will do this finger-to-nose motion repeatedly for 30 seconds with one hand, and do 30 seconds with your other hand.",
-                "image":{
-                    "type":"fetchable",
-                    "imageName": "FingerToNose4",
-                    "placementType":"topBackground"
-                },
-                "actions":{
-                    "goForward":{
-                        "type":"default",
-                        "buttonTitle":"Got it"
-                    }
-                }
              },
              {
                 "identifier":"sitDownInstruction",
