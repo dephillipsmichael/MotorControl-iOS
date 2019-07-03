@@ -39,29 +39,7 @@ open class MCTActiveStepViewController : RSDActiveStepViewController, MCTHandSte
     public var imageView: UIImageView? {
         return self.navigationHeader?.imageView ?? self.navigationBody?.imageView
     }
-    
-    /// Overriden to also update the unit label text when the
-    /// countdown changes.
-    override open var countdown: Int {
-        didSet {
-            self.updateUnitLabelText()
-        }
-    }
-    
-    open override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Formatter for the countdown label.
-        // Overriden to only display seconds.
-        self.countdownFormatter = {
-            let formatter = DateComponentsFormatter()
-            formatter.allowedUnits = [.second]
-            formatter.unitsStyle = .positional
-            formatter.zeroFormattingBehavior = [ .pad ]
-            return formatter
-        }()
-    }
-    
+
     /// Override viewWillAppear to also set the unitLabel text.
     override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -69,17 +47,8 @@ open class MCTActiveStepViewController : RSDActiveStepViewController, MCTHandSte
         // DateComponentsFormatter doesn't actually translate into other languages.
         self.updateImage()
         self.updateLabelText()
-        self.updateUnitLabelText()
         self.view.setNeedsLayout()
         self.view.setNeedsUpdateConstraints()
-    }
-    
-    /// Updates the unit label text. Chooses between the plural and
-    /// singular label options (in English "SECONDS REMAINING" vs
-    /// "SECOND REMAINING").
-    open func updateUnitLabelText() {
-        let localizationKey = self.countdown == 1 ? "ACTIVE_STEP_UNIT_LABEL_SINGULAR" : "ACTIVE_STEP_UNIT_LABEL"
-        self.unitLabel?.text = Localization.localizedString(localizationKey)
     }
     
     /// Override to return the instruction with the formatted text replaced.
