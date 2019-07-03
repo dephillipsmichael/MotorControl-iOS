@@ -48,9 +48,6 @@ open class MCTActiveStepViewController : RSDActiveStepViewController, MCTHandSte
         }
     }
     
-    /// The restart test button.
-    @IBOutlet weak var restartButton: RSDRoundedButton!
-    
     open override func viewDidLoad() {
         super.viewDidLoad()
         
