@@ -141,9 +141,6 @@
                      "viewIdentifier":"Completion",
                      "storyboardIdentifier":"ActiveTaskSteps"
                  },
-                 "spokenInstructions":{
-                     "start":"Great job! You just completed the Finger-to-Nose activity."
-                 },
                  "actions": {
                      "goForward":{
                         "type":"default",
