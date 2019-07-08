@@ -58,3 +58,8 @@
 "WALK_BALANCE_COMPLETION" = "You have completed the Walk and Balance activity.";
 "TREMOR_COMPLETION_%@" = "You just completed your %@ Tremor Test activity.";
 "TREMOR_COMPLETION" = "You have completed the Tremor Test activity.";
+
+"HAND_SELECTION_TITLE" = "Which hands are you capable of doing this task with?";
+"HAND_SELECTION_CHOICE_RIGHT" = "I can only perform this activity with my RIGHT hand.";
+"HAND_SELECTION_CHOICE_LEFT" = "I can only perform this activity with my LEFT hand.";
+"HAND_SELECTION_CHOICE_BOTH" = "I can perform this activity with BOTH hands.";
