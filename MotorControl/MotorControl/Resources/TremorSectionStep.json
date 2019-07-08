@@ -37,14 +37,6 @@
                       "imageName":"HoldPhone-Left",
                       "placementType":"fullsizeBackground"
                   },
-                  "colorMapping":{
-                      "type": "singleColor",
-                      "colorStyle": "primary"
-                  },
-                  "viewTheme":{
-                      "viewIdentifier":"Action",
-                      "storyboardIdentifier":"ActiveTaskSteps"
-                  },
                   "commands":["transitionAutomatically", "shouldDisableIdleTimer", "vibrate", "playSound"],
                   "actions":{
                       "skip":{

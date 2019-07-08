@@ -33,6 +33,9 @@
 
 import Foundation
 
+extension MCTActiveStepObject : RSDStepViewControllerVendor {
+}
+
 open class MCTActiveStepViewController : RSDActiveStepViewController, MCTHandStepController {
     
     /// Retuns the imageView, in this case the image from the navigationHeader.

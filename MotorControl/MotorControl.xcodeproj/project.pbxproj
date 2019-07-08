@@ -41,6 +41,7 @@
 		F8E3B83321BB472B0004284E /* MCTTappingCompletionStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E3B82C21BB472B0004284E /* MCTTappingCompletionStepViewController.swift */; };
 		F8E3B83421BB472B0004284E /* MCTTappingStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E3B82D21BB472B0004284E /* MCTTappingStepViewController.swift */; };
 		F8E3B83821BB474F0004284E /* MCTTapButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E3B83621BB474F0004284E /* MCTTapButton.swift */; };
+		FF24D12E22D3F707009D8AE3 /* MCTTappingStepObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF24D12D22D3F707009D8AE3 /* MCTTappingStepObject.swift */; };
 		FFBBABDF22D3E22000978A9B /* BalanceSectionStep.json in Resources */ = {isa = PBXBuildFile; fileRef = FFBBABDD22D3E21F00978A9B /* BalanceSectionStep.json */; };
 		FFBBABE022D3E22000978A9B /* WalkSectionStep.json in Resources */ = {isa = PBXBuildFile; fileRef = FFBBABDE22D3E21F00978A9B /* WalkSectionStep.json */; };
 /* End PBXBuildFile section */
@@ -96,6 +97,7 @@
 		F8E3B82D21BB472B0004284E /* MCTTappingStepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCTTappingStepViewController.swift; sourceTree = "<group>"; };
 		F8E3B83621BB474F0004284E /* MCTTapButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCTTapButton.swift; sourceTree = "<group>"; };
 		F8E3B83A21BB48690004284E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FF24D12D22D3F707009D8AE3 /* MCTTappingStepObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCTTappingStepObject.swift; sourceTree = "<group>"; };
 		FFBBABDD22D3E21F00978A9B /* BalanceSectionStep.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BalanceSectionStep.json; sourceTree = "<group>"; };
 		FFBBABDE22D3E21F00978A9B /* WalkSectionStep.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = WalkSectionStep.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -226,6 +228,7 @@
 				F8E3B81F21BB46F00004284E /* MCTSkippableSectionStepObject.swift */,
 				F837224A223320B400C9A2EA /* MCTHandInstructionStepObject.swift */,
 				F82A4A212295EC9D00BEBE3C /* MCTActiveStepObject.swift */,
+				FF24D12D22D3F707009D8AE3 /* MCTTappingStepObject.swift */,
 			);
 			path = StepObjects;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 				F813D6FF21BB416C00795664 /* MCTFactory.swift in Sources */,
 				F8E3B82F21BB472B0004284E /* MCTCountdownStepViewController.swift in Sources */,
 				F8E3B83321BB472B0004284E /* MCTTappingCompletionStepViewController.swift in Sources */,
+				FF24D12E22D3F707009D8AE3 /* MCTTappingStepObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

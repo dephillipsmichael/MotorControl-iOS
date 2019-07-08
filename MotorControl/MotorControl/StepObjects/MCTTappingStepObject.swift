@@ -1,5 +1,5 @@
 //
-//  MCTActiveStepObject.swift
+//  MCTTappingStepObject.swift
 //  MotorControl
 //
 //  Copyright © 2019 Sage Bionetworks. All rights reserved.
@@ -33,30 +33,23 @@
 
 import Foundation
 
-/// Create a subclass of the active step that always requires background audio and should end on interrupt.
-public class MCTActiveStepObject : RSDActiveUIStepObject {
+/// Create a tapping step that will instantiate the tapping result and can load the storyboard view controller.
+public class MCTTappingStepObject: MCTActiveStepObject {
     
-    /// Returns `true`.
-    public override var shouldEndOnInterrupt: Bool {
-        get { return true }
-        set {} // ignored
-    }
-    
-    /// Returns `true`.
-    public override var requiresBackgroundAudio: Bool {
-        get { return true }
-        set {} // ignored
+    /// Returns a new instance of a `MCTTappingResultObject`.
+    public override func instantiateStepResult() -> RSDResult {
+        return MCTTappingResultObject(identifier: self.identifier)
     }
     
     #if os(iOS)
     
-    public func instantiateViewController(with parent: RSDPathComponent?) -> (UIViewController & RSDStepController)? {
-        switch self.stepType {
-        case .countdown:
-            return MCTCountdownStepViewController(step: self, parent: parent)
-        default:
-            return MCTActiveStepViewController(step: self, parent: parent)
-        }
+    /// By default, returns the task view controller from the storyboard.
+    public override func instantiateViewController(with parent: RSDPathComponent?) -> (UIViewController & RSDStepController)? {
+        let bundle = Bundle(for: MCTTappingStepViewController.self)
+        let storyboard = UIStoryboard(name: "ActiveTaskSteps", bundle: bundle)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Tapping") as? MCTTappingStepViewController
+        vc?.stepViewModel = vc?.instantiateStepViewModel(for: self, with: parent)
+        return vc
     }
     
     #endif

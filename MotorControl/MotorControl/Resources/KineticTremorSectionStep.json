@@ -37,14 +37,6 @@
                         "imageName":"",
                         "placementType":"fullsizeBackground"
                     },
-                    "viewTheme":{
-                        "viewIdentifier":"Countdown",
-                        "storyboardIdentifier":"ActiveTaskSteps"
-                    },
-                    "colorMapping":{
-                        "type": "singleColor",
-                        "colorStyle": "primary"
-                    },
                     "duration":5,
                     "commands":["playSoundOnStart", "transitionAutomatically"]
               },
@@ -56,14 +48,6 @@
                       "type":"fetchable",
                       "imageName":"KineticHoldPhone-Left",
                       "placementType":"fullsizeBackground"
-                  },
-                  "colorMapping":{
-                      "type": "singleColor",
-                      "colorStyle": "primary"
-                  },
-                  "viewTheme":{
-                      "viewIdentifier":"Action",
-                      "storyboardIdentifier":"ActiveTaskSteps"
                   },
                   "commands":["transitionAutomatically", "shouldDisableIdleTimer", "vibrate", "playSound"],
                   "actions":{

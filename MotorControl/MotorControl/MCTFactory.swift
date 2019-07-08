@@ -36,6 +36,7 @@ import Foundation
 extension RSDStepType {
     public static let handSelection: RSDStepType = "handSelection"
     public static let handInstruction: RSDStepType = "handInstruction"
+    public static let tapping: RSDStepType = "tapping"
 }
 
 fileprivate var _didLoad: Bool = false
@@ -77,6 +78,8 @@ open class MCTFactory : RSDFactory {
             return try MCTHandInstructionStepObject(from: decoder)
         case .countdown, .active:
             return try MCTActiveStepObject(from: decoder)
+        case .tapping:
+            return try MCTTappingStepObject(from: decoder)
         default:
             return try super.decodeStep(from: decoder, with: type)
         }
