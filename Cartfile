@@ -1,1 +1,1 @@
-github "Sage-Bionetworks/SageResearch" >= 2.1.49
+github "Sage-Bionetworks/SageResearch" ~> 2.2
