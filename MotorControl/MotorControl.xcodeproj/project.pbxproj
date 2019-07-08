@@ -10,7 +10,6 @@
 		4498285B21F5216300C1A8C3 /* Walk_30seconds.json in Resources */ = {isa = PBXBuildFile; fileRef = 4498285A21F5216300C1A8C3 /* Walk_30seconds.json */; };
 		CB60DDC522AABE9800CD34C7 /* Kinetic_Tremor.json in Resources */ = {isa = PBXBuildFile; fileRef = CB60DDC422AABE9800CD34C7 /* Kinetic_Tremor.json */; };
 		CB60DDCD22AB082B00CD34C7 /* KineticTremorSectionStep.json in Resources */ = {isa = PBXBuildFile; fileRef = CB60DDCC22AB082B00CD34C7 /* KineticTremorSectionStep.json */; };
-		CB60DDD222AB198100CD34C7 /* instruction_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CB60DDD122AB10C200CD34C7 /* instruction_video.mp4 */; };
 		F813D6EB21BB40D900795664 /* MotorControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F813D6E121BB40D900795664 /* MotorControl.framework */; };
 		F813D6F221BB40D900795664 /* MotorControl.h in Headers */ = {isa = PBXBuildFile; fileRef = F813D6E421BB40D900795664 /* MotorControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F813D6FE21BB416C00795664 /* MCTTaskInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F813D6FC21BB416C00795664 /* MCTTaskInfo.swift */; };
@@ -60,7 +59,6 @@
 		4498285A21F5216300C1A8C3 /* Walk_30seconds.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Walk_30seconds.json; sourceTree = "<group>"; };
 		CB60DDC422AABE9800CD34C7 /* Kinetic_Tremor.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Kinetic_Tremor.json; sourceTree = "<group>"; };
 		CB60DDCC22AB082B00CD34C7 /* KineticTremorSectionStep.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = KineticTremorSectionStep.json; sourceTree = "<group>"; };
-		CB60DDD122AB10C200CD34C7 /* instruction_video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = instruction_video.mp4; sourceTree = "<group>"; };
 		F813D6E121BB40D900795664 /* MotorControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MotorControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F813D6E421BB40D900795664 /* MotorControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MotorControl.h; sourceTree = "<group>"; };
 		F813D6E521BB40D900795664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -128,7 +126,6 @@
 		CB60DDCE22AB0EE500CD34C7 /* MP4 */ = {
 			isa = PBXGroup;
 			children = (
-				CB60DDD122AB10C200CD34C7 /* instruction_video.mp4 */,
 			);
 			path = MP4;
 			sourceTree = "<group>";
@@ -353,7 +350,6 @@
 				F8E3B81621BB46590004284E /* MotorControl.strings in Resources */,
 				F8E3B81221BB46590004284E /* Images.xcassets in Resources */,
 				CB60DDCD22AB082B00CD34C7 /* KineticTremorSectionStep.json in Resources */,
-				CB60DDD222AB198100CD34C7 /* instruction_video.mp4 in Resources */,
 				F8E3B81721BB46590004284E /* TremorSectionStep.json in Resources */,
 				F8E3B81321BB46590004284E /* TappingSectionStep.json in Resources */,
 				F8E3B81821BB46590004284E /* Walk_And_Balance.json in Resources */,
