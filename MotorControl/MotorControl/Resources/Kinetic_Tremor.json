@@ -49,7 +49,7 @@
                  "identifier":"eachHandInstructions",
                  "type":"instruction",
                  "title":"Each hand for 30 seconds",
-                 "text":"We will do this finger-to-nose motion repeatedly for 30 seconds with one hand, and do 30 seconds with your other hand.",
+                 "text":"We will do this finger-to-nose motion repeatedly for 30 seconds with one hand, and then for 30 seconds with your other hand.",
                  "image":{
                      "type":"fetchable",
                      "imageName": "FingerToNose4",
