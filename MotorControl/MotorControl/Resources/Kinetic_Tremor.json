@@ -39,7 +39,7 @@
                         "type":"reminder",
                         "reminderIdentifier":"Kinetic Tremor"
                     },
-                    "moreInformation": {
+                    "learnMore": {
                         "type": "videoView",
                         "buttonTitle" : "See this in action",
                         "url" : "instruction_video.mp4" },
