@@ -2,7 +2,7 @@
     "identifier":"WalkAndBalance",
     "usesTrackedData":true,
     "shouldHideActions":["goBackward", "skip"],
-    "progressMarkers":["volumeUp", "pantsWithPocket","phoneInPocket.1","walk", "balance"],
+    "progressMarkers":[],
     "steps":[
              {
                 "identifier":"introduction",

@@ -9,6 +9,7 @@
         "startStepIdentifier": "motion",
         "stopStepIdentifier": "motion"
     }],
+    "progressMarkers":["phoneInPocket","motion"],
     "steps": [{
         "identifier": "turnAroundInstructions",
         "type": "instruction",
