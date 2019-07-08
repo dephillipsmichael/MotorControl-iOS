@@ -78,7 +78,11 @@ public struct MCTTaskInfo : RSDTaskInfo, RSDEmbeddedIconVendor, RSDTaskDesign {
     }
     
     /// Default initializer.
-    public init(_ taskIdentifier: MCTTaskIdentifier) {
+    ///
+    /// - parameters:
+    ///     - taskIdentifier: The identifier for the activy to run.
+    ///     - overviewText: The text to display as the overview text for the task.
+    public init(_ taskIdentifier: MCTTaskIdentifier, overviewText: String? = nil) {
         self.taskIdentifier = taskIdentifier
         
         // Pull the title, subtitle, and detail from the first step in the task resource.
@@ -92,6 +96,9 @@ public struct MCTTaskInfo : RSDTaskInfo, RSDEmbeddedIconVendor, RSDTaskDesign {
         }
         
         if let step = (task.stepNavigator as? RSDConditionalStepNavigator)?.steps.first as? RSDUIStep {
+            if let mutableStep = step as? RSDUIStepObject, let text = overviewText {
+                mutableStep.text = text
+            }
             self.title = step.title
             self.subtitle = step.text
             self.detail = step.detail
