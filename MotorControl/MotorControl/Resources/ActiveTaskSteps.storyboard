@@ -157,7 +157,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5aE-sq-nnA" userLabel="Cancel Button">
-                                <rect key="frame" x="8" y="28" width="50" height="50"/>
+                                <rect key="frame" x="20" y="40" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="5aE-sq-nnA" secondAttribute="height" multiplier="1:1" id="laM-ZA-jPR"/>
                                 </constraints>
@@ -475,14 +475,15 @@
                     </view>
                     <connections>
                         <outlet property="countdownDial" destination="din-4l-hhu" id="yf1-g9-fUN"/>
-                        <outlet property="countdownLabel" destination="2aM-cl-a66" id="F7K-b9-g5E"/>
                         <outlet property="instructionLabel" destination="FPl-h9-g1S" id="hs6-1x-6Vh"/>
                         <outlet property="leftButton" destination="MSP-pP-izs" id="cSg-yQ-sY2"/>
                         <outlet property="navigationHeader" destination="6ZJ-Gt-NcM" id="NJQ-dA-V64"/>
                         <outlet property="rightButton" destination="3YF-mb-7pX" id="Lgp-2p-JEd"/>
                         <outlet property="statusBarBackgroundView" destination="fwv-VO-V1z" id="oio-w7-2nG"/>
                         <outlet property="tappingCountLabel" destination="2aM-cl-a66" id="0L3-Bf-9cd"/>
-                        <outlet property="unitLabel" destination="c07-hW-t1h" id="xzZ-mx-w3L"/>
+                        <outlet property="tappingUnitLabel" destination="c07-hW-t1h" id="UfY-5v-Ffx"/>
+                        <outletCollection property="activeViews" destination="MSP-pP-izs" collectionClass="NSMutableArray" id="PgA-kL-92U"/>
+                        <outletCollection property="activeViews" destination="3YF-mb-7pX" collectionClass="NSMutableArray" id="iDM-u5-dIH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qbv-EH-UJX" userLabel="First Responder" sceneMemberID="firstResponder"/>

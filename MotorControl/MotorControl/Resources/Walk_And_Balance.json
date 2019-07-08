@@ -299,12 +299,12 @@
                               "actions":{
                                   "skip":{
                                       "type":"navigation",
-                                      "skipToIdentifier":"countdown.1",
+                                      "skipToIdentifier":"countdown.2",
                                       "buttonTitle": "Restart test"
                                   },
                                   "reviewInstructions":{
                                       "type":"navigation",
-                                      "skipToIdentifier": "walkInstructions",
+                                      "skipToIdentifier": "turnAroundInstructions",
                                       "buttonTitle": "Review instructions"
                                   }
                               },
