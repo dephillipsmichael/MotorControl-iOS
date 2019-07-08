@@ -6,6 +6,7 @@
                          "identifier":"motion",
                          "type":"motion",
                          "startStepIdentifier": "tremor",
+                         "stopStepIdentifier": "tremor",
                          "requiresBackgroundAudio":true,
                          "recorderTypes":["accelerometer", "gyro", "gravity", "userAcceleration", "attitude", "rotationRate"]
                      }
