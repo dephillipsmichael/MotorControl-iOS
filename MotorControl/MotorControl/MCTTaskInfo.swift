@@ -80,7 +80,7 @@ public struct MCTTaskInfo : RSDTaskInfo, RSDEmbeddedIconVendor, RSDTaskDesign {
     /// Default initializer.
     ///
     /// - parameters:
-    ///     - taskIdentifier: The identifier for the activy to run.
+    ///     - taskIdentifier: The identifier for the activity to run.
     ///     - overviewText: The text to display as the overview text for the task.
     public init(_ taskIdentifier: MCTTaskIdentifier, overviewText: String? = nil) {
         self.taskIdentifier = taskIdentifier
