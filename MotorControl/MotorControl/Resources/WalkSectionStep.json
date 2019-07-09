@@ -9,7 +9,6 @@
         "startStepIdentifier": "motion",
         "stopStepIdentifier": "motion"
     }],
-    "progressMarkers":["volumeUp", "pantsWithPocket","phoneInPocket","motion"],
     "steps": [{
         "identifier": "walkInstructions",
         "type": "instruction",

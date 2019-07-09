@@ -2,7 +2,7 @@
     "identifier":"Tapping",
     "usesTrackedData":true,
     "shouldHideActions":["goBackward", "skip"],
-    "progressMarkers":["fingerTappingInstructions", "phoneOnTableInstruction", "tappingFirstHandInstruction", "completion"],
+    "progressMarkers":[],
     "steps":[
              {
                 "identifier":"introduction",
