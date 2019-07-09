@@ -111,7 +111,7 @@
                  "identifier":"completion",
                  "type":"completion",
                  "title":"Great job!",
-                 "text":"You just completed",
+                 "text":"You just completed the Tapping Activity.",
                  "image":{
                      "type":"fetchable",
                      "imageName":"Completion-FingerTapping",
