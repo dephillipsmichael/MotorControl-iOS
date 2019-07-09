@@ -8,7 +8,7 @@
                 "identifier":"introduction",
                 "type":"overview",
                 "title":"Finger Tapping",
-                "text":"In this activity we will measure your finger tapping speed with each hand.",
+                "text":"In this activity, we will measure your finger tapping speed and accuracy with each hand.",
                 "permissions":[
                                {
                                 "permissionType":"motion",
@@ -43,7 +43,7 @@
                 "identifier":"fingerTappingInstructions",
                 "type":"instruction",
                 "title":"You will finger tap for 30 seconds with each hand",
-                "text":"This activity measures your tapping speed for each hand. Your medical provider may measure this differently.",
+                "text":"This activity measures your tapping speed and accuracy for each hand. Your medical provider may measure this differently.",
                 "image":{
                      "type":"animated",
                      "imageNames":["TapLeft1", "TapLeft2"],
