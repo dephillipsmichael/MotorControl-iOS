@@ -33,11 +33,6 @@
                     "identifier":"countdown",
                     "type":"countdown",
                     "text":"Begin in...",
-                    "image":{
-                        "type":"fetchable",
-                        "imageName":"",
-                        "placementType":"fullsizeBackground"
-                    },
                     "duration":5,
                     "commands":["playSoundOnStart", "transitionAutomatically"]
               },

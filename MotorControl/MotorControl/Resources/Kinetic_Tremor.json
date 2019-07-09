@@ -85,7 +85,7 @@
                  "identifier":"holdPhoneInstructions",
                  "type":"instruction",
                  "title":"Hold phone with index finger pointing out",
-                 "text":"Hold your phone with your pointer finger sticking out sideways from the phone",
+                 "text":"Hold your phone with your pointer finger sticking out sideways from the phone.",
                  "image":{
                      "type":"fetchable",
                      "imageName": "FingerToNose2",
@@ -131,7 +131,7 @@
                  "identifier":"completion",
                  "type":"completion",
                  "title":"Great job!",
-                 "text":"You just completed the Finger-to-Nose activity.",
+                 "text":"FINGER_TO_NOSE_COMPLETION",
                  "image":{
                      "type":"fetchable",
                      "imageName":"Completion-Tremor",

@@ -17,9 +17,10 @@
                             ],
                  "image":{
                      "type":"animated",
-                     "imageNames":["Walking-1", "Walking-2", "Walking-3", "Walking-4", "Walking-5", "Walking-6", "Walking-7", "Walking-8", "Walking-9", "Walking-10", "Walking-11", "Walking-12"],
+                     "imageNames":["Walking-1", "Walking-2", "Walking-3", "Walking-4", "Walking-5", "Walking-6", "Walking-7", "Walking-8", "Walking-9", "Walking-10", "Balance-1", "Balance-1", "Balance-1", "Balance-2", "Balance-3", "Balance-4", "Balance-5", "Balance-6", "Balance-7", "Balance-8", "Balance-9", "Balance-10", "Balance-11"],
                      "placementType":"topMarginBackground",
-                     "animationDuration":6.0
+                     "animationRepeatCount": 1,
+                     "animationDuration":10.5
                  },
                 "icons": [
                           {

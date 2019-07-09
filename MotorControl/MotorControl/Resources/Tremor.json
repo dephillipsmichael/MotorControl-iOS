@@ -99,9 +99,6 @@
                      "viewIdentifier":"Completion",
                      "storyboardIdentifier":"ActiveTaskSteps"
                  },
-                 "spokenInstructions":{
-                     "start":"Great job, you are done with the Tremor test."
-                 },
                  "actions": {
                      "goForward":{
                         "type":"default",

@@ -55,7 +55,8 @@
                   "spokenInstructions":{
                       "start":"With your %@ hand in your lap, keep holding your phone with the screen facing up for 30 seconds.",
                       "halfway":"Halfway done.",
-                      "23":"Almost done."
+                      "23":"Almost done.",
+                      "end":"Great job! You’re done with this hand."
                   }
                }
             ]
