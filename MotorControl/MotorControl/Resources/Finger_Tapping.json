@@ -43,7 +43,7 @@
                 "identifier":"fingerTappingInstructions",
                 "type":"instruction",
                 "title":"You will finger tap for 30 seconds with each hand",
-                "text":"This activity measures your tapping speed and accuracy for each hand. Your medical provider may measure this differently.",
+                "text":"Speed and accuracy of finger tapping can show us the fine motor control of your hands. Your doctor might measure this differently.",
                 "image":{
                      "type":"animated",
                      "imageNames":["TapLeft1", "TapLeft2"],
