@@ -14,7 +14,7 @@
         "identifier": "turnAroundInstructions",
         "type": "instruction",
         "title": "Turn around, and then stand still",
-        "text": "You’ll turn around a circle and stand still, with your feet shoulder-width apart.\n\nRest your arms by your side and try to avoid moving for 30 seconds.",
+        "text": "You’ll turn around in a circle and stand still, with your feet shoulder-width apart.\n\nRest your arms by your side and try to avoid moving for 30 seconds.",
         "fullInstructionsOnly": true,
         "image": {
             "type": "animated",
