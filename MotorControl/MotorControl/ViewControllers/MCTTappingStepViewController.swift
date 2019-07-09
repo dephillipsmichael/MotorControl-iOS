@@ -132,6 +132,13 @@ public class MCTTappingStepViewController: MCTActiveStepViewController {
         _buttonRect1 = self.view.convert(leftButton.bounds, from: leftButton)
         _buttonRect2 = self.view.convert(rightButton.bounds, from: rightButton)
     }
+    
+    open override func setupViews() {
+        super.setupViews()
+        
+        tappingCountLabel?.font = self.designSystem.fontRules.font(for: .largeNumber, compatibleWith: traitCollection)
+        tappingUnitLabel?.font = self.designSystem.fontRules.baseFont(for: .largeHeader)  // NOT DYNAMIC
+    }
 
     /// Update the step result associated with this step view controller.
     func updateTappingResult() {
