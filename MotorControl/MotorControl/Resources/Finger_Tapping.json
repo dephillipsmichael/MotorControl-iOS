@@ -83,7 +83,7 @@
                 "identifier":"tappingFirstHandInstruction",
                 "type":"handInstruction",
                 "title":"First, tap with your %@ hand",
-                "text": "Alternate tapping the buttons that appear with your index and middle finger of your %@ HAND. Keep tapping for 30 seconds for as fast as you can.",
+                "text": "Alternate tapping the buttons that appear with your first and middle finger on your %@ HAND. Keep tapping for 30 seconds and as fast as you can.",
                 "image": {
                     "type":"animated",
                     "imageNames": ["TapLeft1", "TapLeft2"],
