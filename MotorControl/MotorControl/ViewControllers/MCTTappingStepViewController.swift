@@ -36,23 +36,6 @@
 
 import UIKit
 
-/// Create a tapping step that will instantiate the tapping result and can load the storyboard view controller.
-public class MCTTappingStepObject: MCTActiveStepObject, RSDStepViewControllerVendor {
-    
-    /// Returns a new instance of a `MCTTappingResultObject`.
-    public override func instantiateStepResult() -> RSDResult {
-        return MCTTappingResultObject(identifier: self.identifier)
-    }
-    
-    /// By default, returns the task view controller from the storyboard.
-    public func instantiateViewController(with parent: RSDPathComponent?) -> (UIViewController & RSDStepController)? {
-        let bundle = Bundle(for: MCTTappingStepViewController.self)
-        let storyboard = UIStoryboard(name: "ActiveTaskSteps", bundle: bundle)
-        let vc = storyboard.instantiateViewController(withIdentifier: "Tapping") as? MCTTappingStepViewController
-        vc?.stepViewModel = vc?.instantiateStepViewModel(for: self, with: parent)
-        return vc
-    }
-}
 
 /// The tapping step view controller sets up gesture listeners that are used to track the button taps.
 public class MCTTappingStepViewController: MCTActiveStepViewController {
@@ -148,6 +131,13 @@ public class MCTTappingStepViewController: MCTActiveStepViewController {
         _viewSize = self.view.bounds.size
         _buttonRect1 = self.view.convert(leftButton.bounds, from: leftButton)
         _buttonRect2 = self.view.convert(rightButton.bounds, from: rightButton)
+    }
+    
+    open override func setupViews() {
+        super.setupViews()
+        
+        tappingCountLabel?.font = self.designSystem.fontRules.font(for: .largeNumber, compatibleWith: traitCollection)
+        tappingUnitLabel?.font = self.designSystem.fontRules.baseFont(for: .largeHeader)  // NOT DYNAMIC
     }
 
     /// Update the step result associated with this step view controller.

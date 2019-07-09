@@ -6,6 +6,7 @@
                          "identifier":"motion",
                          "type":"motion",
                          "startStepIdentifier": "tremor",
+                         "stopStepIdentifier": "tremor",
                          "requiresBackgroundAudio":true,
                          "recorderTypes":["accelerometer", "gyro", "gravity", "userAcceleration", "attitude", "rotationRate"]
                      }
@@ -32,19 +33,6 @@
                     "identifier":"countdown",
                     "type":"countdown",
                     "text":"Begin in...",
-                    "image":{
-                        "type":"fetchable",
-                        "imageName":"",
-                        "placementType":"fullsizeBackground"
-                    },
-                    "viewTheme":{
-                        "viewIdentifier":"Countdown",
-                        "storyboardIdentifier":"ActiveTaskSteps"
-                    },
-                    "colorMapping":{
-                        "type": "singleColor",
-                        "colorStyle": "primary"
-                    },
                     "duration":5,
                     "commands":["playSoundOnStart", "transitionAutomatically"]
               },
@@ -56,14 +44,6 @@
                       "type":"fetchable",
                       "imageName":"KineticHoldPhone-Left",
                       "placementType":"fullsizeBackground"
-                  },
-                  "colorMapping":{
-                      "type": "singleColor",
-                      "colorStyle": "primary"
-                  },
-                  "viewTheme":{
-                      "viewIdentifier":"Action",
-                      "storyboardIdentifier":"ActiveTaskSteps"
                   },
                   "commands":["transitionAutomatically", "shouldDisableIdleTimer", "vibrate", "playSound"],
                   "actions":{

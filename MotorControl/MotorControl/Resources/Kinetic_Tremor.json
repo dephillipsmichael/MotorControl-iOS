@@ -38,11 +38,7 @@
                     "skip":{
                         "type":"reminder",
                         "reminderIdentifier":"Kinetic Tremor"
-                    },
-                    "learnMore": {
-                        "type": "videoView",
-                        "buttonTitle" : "See this in action",
-                        "url" : "instruction_video.mp4" },
+                    }
                  }
              },
              {
@@ -64,26 +60,7 @@
              },
              {
                  "identifier": "handSelection",
-                 "type": "handSelection",
-                 "title": "Which hands are you capable of doing this task with?",
-                 "inputFields":[{
-                     "uiHint": "list",
-                     "type": "singleChoice.string",
-                     "choices": [
-                         {
-                             "text": "I can only perform this activity with my LEFT hand.",
-                             "value": "left"
-                         },
-                         {
-                             "text": "I can only perform this activity with my RIGHT hand.",
-                             "value": "right"
-                         },
-                         {
-                             "text": "I can perform this activity with BOTH hands.",
-                             "value": "both"
-                         }
-                     ]
-                 }]
+                 "type": "handSelection"
              },
              {
                 "identifier":"sitDownInstruction",
@@ -108,7 +85,7 @@
                  "identifier":"holdPhoneInstructions",
                  "type":"instruction",
                  "title":"Hold phone with index finger pointing out",
-                 "text":"Hold your phone with your pointer finger sticking out sideways from the phone",
+                 "text":"Hold your phone with your pointer finger sticking out sideways from the phone.",
                  "image":{
                      "type":"fetchable",
                      "imageName": "FingerToNose2",
@@ -154,7 +131,7 @@
                  "identifier":"completion",
                  "type":"completion",
                  "title":"Great job!",
-                 "text":"You just completed the Finger-to-Nose activity.",
+                 "text":"FINGER_TO_NOSE_COMPLETION",
                  "image":{
                      "type":"fetchable",
                      "imageName":"Completion-Tremor",
@@ -163,9 +140,6 @@
                  "viewTheme":{
                      "viewIdentifier":"Completion",
                      "storyboardIdentifier":"ActiveTaskSteps"
-                 },
-                 "spokenInstructions":{
-                     "start":"Great job! You just completed the Finger-to-Nose activity."
                  },
                  "actions": {
                      "goForward":{
