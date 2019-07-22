@@ -89,7 +89,8 @@ public struct MCTTaskInfo : RSDTaskInfo, RSDEmbeddedIconVendor, RSDTaskDesign {
         let factory = (RSDFactory.shared as? MCTFactory) ?? MCTFactory()
         
         do {
-            let mTask = try factory.decodeTask(with: taskIdentifier.resourceTransformer())
+            let mTask = try factory.decodeTask(with: taskIdentifier.resourceTransformer(),
+                                               taskIdentifier: taskIdentifier.rawValue)
             self.task = mTask as! RSDTaskObject
         } catch let err {
             fatalError("Failed to decode the task. \(err)")

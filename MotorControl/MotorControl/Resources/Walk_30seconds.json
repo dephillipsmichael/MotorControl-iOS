@@ -1,5 +1,5 @@
 {
-    "identifier":"Walk30s",
+    "identifier":"Walk30Seconds",
     "usesTrackedData":true,
     "shouldHideActions":["goBackward", "skip"],
     "progressMarkers":[],
