@@ -111,8 +111,8 @@ public class MCTTappingStepViewController: MCTActiveStepViewController {
     }
     
     private func _setContinueButtonLabel() {
-        let handOrder = self.handOrder()!
-        let hand = self.whichHand()!
+        let handOrder = self.handOrder() ?? [.right]
+        let hand = self.whichHand() ?? .right
         var buttonTitle: String? = nil
         if hand != handOrder.last,
            let otherHand = hand.otherHand {

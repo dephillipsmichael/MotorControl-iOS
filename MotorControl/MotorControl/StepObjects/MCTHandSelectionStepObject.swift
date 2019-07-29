@@ -56,6 +56,7 @@ public class MCTHandSelectionStepObject : RSDUIStepObject, RSDFormUIStep {
                                     text: Localization.localizedString("HAND_SELECTION_CHOICE_\($0.uppercased())"))
         }
         choiceField = RSDChoiceInputFieldObject(identifier: self.identifier, choices: choices, dataType: .collection(.singleChoice, .string), uiHint: .list, prompt: nil, defaultAnswer: "both")
+        choiceField.isOptional = false
         
         // Set up the title if not defined.
         if self.title == nil && self.text == nil {
@@ -103,7 +104,7 @@ public class MCTHandSelectionDataSource : RSDFormStepDataSourceObject {
     override open var initialResult : RSDCollectionResult? {
         // TODO: syoung 05/06/2019 Replace user defaults with data tracking.
         let defaults = UserDefaults.standard
-        guard let handSelection = defaults.string(forKey: lastHandSelectionKey) else { return nil }
+        let handSelection = defaults.string(forKey: lastHandSelectionKey) ?? MCTHandSelection.both.rawValue
         var ret = self.instantiateCollectionResult()
         var answerResult = RSDAnswerResultObject(identifier: MCTHandSelectionDataSource.selectionKey, answerType: .string)
         answerResult.value = handSelection
