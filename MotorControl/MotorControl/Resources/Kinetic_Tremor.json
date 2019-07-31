@@ -8,7 +8,7 @@
                 "identifier":"introduction",
                 "type":"overview",
                 "title":"Finger-to-Nose",
-                "text":"In this activity, you’ll hold your phone beside you at arm’s length. You’ll hold your phone with your pointer finger sticking out sideways. Then touch the tip of your nose with the tip of your finger. You will do this repeatedly for 30 seconds.  Our goal is to measure your hand movement during the arm swing and then during the precise movement when you touch finger-to-nose.",
+                "text":"In this activity, you’ll hold your phone with your pointer finger sticking out sideways. Then touch the tip of your nose with the tip of your finger. Your goal is to be as accurate as possible in touching your nose.",
                 "permissions":[
                                {
                                 "permissionType":"motion",
@@ -19,8 +19,8 @@
                     "type":"animated",
                     "imageNames":["KineticHoldPhone-Left", "FingerToNose4", "FingerToNose5"],
                     "placementType":"topBackground",
-                    "animationDuration": 4,
-                    "animationRepeatCount": 1
+                    "animationDuration": 3,
+                    "animationRepeatCount": 3
                 },
                 "icons": [
                           {
@@ -44,7 +44,7 @@
                     "learnMore": {
                         "type": "videoView",
                         "buttonTitle" : "See this in action",
-                        "url" : "instruction_video.mp4" },
+                        "url" : "KineticTremor.mp4" },
                  }
              },
              {
@@ -56,8 +56,8 @@
                      "type":"animated",
                      "imageNames":["KineticHoldPhone-Left", "FingerToNose4", "FingerToNose5"],
                      "placementType":"topBackground",
-                     "animationDuration": 4,
-                     "animationRepeatCount": 1
+                     "animationDuration": 3,
+                     "animationRepeatCount": 3
                  },
                  "actions":{
                      "goForward":{
@@ -132,8 +132,8 @@
                      "type":"animated",
                      "imageNames":["KineticHoldPhone-Left", "FingerToNose4", "FingerToNose5"],
                      "placementType":"topBackground",
-                     "animationDuration": 4,
-                     "animationRepeatCount": 1
+                     "animationDuration": 3,
+                     "animationRepeatCount": 3
                  },
                  "actions":{
                      "goForward":{

@@ -34,7 +34,11 @@
                     "skip":{
                         "type":"reminder",
                         "reminderIdentifier":"Tremor"
-                    }
+                    },
+                    "learnMore": {
+                        "type": "videoView",
+                        "buttonTitle" : "See this in action",
+                        "url" : "Tremor.mp4" },
                  }
              },
              {

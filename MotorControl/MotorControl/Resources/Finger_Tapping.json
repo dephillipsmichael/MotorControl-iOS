@@ -8,7 +8,7 @@
                 "identifier":"introduction",
                 "type":"overview",
                 "title":"Finger Tapping",
-                "text":"In this activity we will measure your finger tapping speed with each hand; this may reflect severity of motor symptoms in Parkinson’s Disease.",
+                "text":"In this activity we will measure your finger tapping speed with each hand.",
                 "permissions":[
                                {
                                 "permissionType":"motion",
@@ -43,7 +43,7 @@
                 "identifier":"fingerTappingInstructions",
                 "type":"instruction",
                 "title":"You will finger tap for 30 seconds with each hand",
-                "text":"Speed of finger tapping can reflect severity of motor symptoms in Parkinson’s disease. This activity measures your tapping speed for each hand. Your medical provider may measure this differently.",
+                "text":"Speed and accuracy of finger tapping is a measure of motor control. This activity measures your tapping speed for each hand. Your medical provider may measure this differently.",
                 "image":{
                      "type":"animated",
                      "imageNames":["TapLeft1", "TapLeft2"],
