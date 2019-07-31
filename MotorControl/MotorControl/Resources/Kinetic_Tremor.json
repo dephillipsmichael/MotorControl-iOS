@@ -40,11 +40,7 @@
                     "skip":{
                         "type":"reminder",
                         "reminderIdentifier":"Kinetic Tremor"
-                    },
-                    "learnMore": {
-                        "type": "videoView",
-                        "buttonTitle" : "See this in action",
-                        "url" : "KineticTremor.mp4" },
+                    }
                  }
              },
              {
