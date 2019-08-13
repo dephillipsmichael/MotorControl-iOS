@@ -42,6 +42,53 @@
 		F8E3B83421BB472B0004284E /* MCTTappingStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E3B82D21BB472B0004284E /* MCTTappingStepViewController.swift */; };
 		F8E3B83821BB474F0004284E /* MCTTapButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E3B83621BB474F0004284E /* MCTTapButton.swift */; };
 		FF24D12E22D3F707009D8AE3 /* MCTTappingStepObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF24D12D22D3F707009D8AE3 /* MCTTappingStepObject.swift */; };
+		FF89CC8123025804003676F8 /* PantsWPocket.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CC6223025803003676F8 /* PantsWPocket.pdf */; };
+		FF89CC8223025804003676F8 /* Walking-12.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CC6423025803003676F8 /* Walking-12.pdf */; };
+		FF89CC8323025804003676F8 /* Walking-11.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CC6523025803003676F8 /* Walking-11.pdf */; };
+		FF89CC8423025804003676F8 /* Walking-10.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CC6623025803003676F8 /* Walking-10.pdf */; };
+		FF89CC8523025804003676F8 /* Walking-9.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CC6723025803003676F8 /* Walking-9.pdf */; };
+		FF89CC8623025804003676F8 /* Walking-8.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CC6823025803003676F8 /* Walking-8.pdf */; };
+		FF89CC8723025804003676F8 /* Walking-6.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CC6923025803003676F8 /* Walking-6.pdf */; };
+		FF89CC8823025804003676F8 /* Walking-7.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CC6A23025803003676F8 /* Walking-7.pdf */; };
+		FF89CC8923025804003676F8 /* Walking-5.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CC6B23025803003676F8 /* Walking-5.pdf */; };
+		FF89CC8A23025804003676F8 /* Walking-4.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CC6C23025803003676F8 /* Walking-4.pdf */; };
+		FF89CC8B23025804003676F8 /* Walking-1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CC6D23025803003676F8 /* Walking-1.pdf */; };
+		FF89CC8C23025804003676F8 /* Walking-3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CC6E23025803003676F8 /* Walking-3.pdf */; };
+		FF89CC8D23025804003676F8 /* Walking-2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CC6F23025803003676F8 /* Walking-2.pdf */; };
+		FF89CC8E23025804003676F8 /* Balance-8.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CC7123025803003676F8 /* Balance-8.pdf */; };
+		FF89CC8F23025804003676F8 /* Balance-9.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CC7223025804003676F8 /* Balance-9.pdf */; };
+		FF89CC9023025804003676F8 /* Balance-10.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CC7323025804003676F8 /* Balance-10.pdf */; };
+		FF89CC9123025804003676F8 /* Balance-11.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CC7423025804003676F8 /* Balance-11.pdf */; };
+		FF89CC9223025804003676F8 /* Balance-1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CC7523025804003676F8 /* Balance-1.pdf */; };
+		FF89CC9323025804003676F8 /* Balance-2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CC7623025804003676F8 /* Balance-2.pdf */; };
+		FF89CC9423025804003676F8 /* Balance-3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CC7723025804003676F8 /* Balance-3.pdf */; };
+		FF89CC9523025804003676F8 /* Balance-7.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CC7823025804003676F8 /* Balance-7.pdf */; };
+		FF89CC9623025804003676F8 /* Balance-6.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CC7923025804003676F8 /* Balance-6.pdf */; };
+		FF89CC9723025804003676F8 /* Balance-4.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CC7A23025804003676F8 /* Balance-4.pdf */; };
+		FF89CC9823025804003676F8 /* Balance-5.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CC7B23025804003676F8 /* Balance-5.pdf */; };
+		FF89CC9923025804003676F8 /* PhoneInPocket-2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CC7D23025804003676F8 /* PhoneInPocket-2.pdf */; };
+		FF89CC9A23025804003676F8 /* PhoneInPocket-3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CC7E23025804003676F8 /* PhoneInPocket-3.pdf */; };
+		FF89CC9B23025804003676F8 /* PhoneInPocket-1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CC7F23025804003676F8 /* PhoneInPocket-1.pdf */; };
+		FF89CC9C23025804003676F8 /* TurnUpVolume.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CC8023025804003676F8 /* TurnUpVolume.pdf */; };
+		FF89CCA123025D42003676F8 /* HoldPhone-Left.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CC9E23025D42003676F8 /* HoldPhone-Left.pdf */; };
+		FF89CCA223025D42003676F8 /* Sitting.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CC9F23025D42003676F8 /* Sitting.pdf */; };
+		FF89CCA323025D42003676F8 /* TremorHoldPhone.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CCA023025D42003676F8 /* TremorHoldPhone.pdf */; };
+		FF89CCAB23025E23003676F8 /* F-FlatSurface.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CCA523025E23003676F8 /* F-FlatSurface.pdf */; };
+		FF89CCAC23025E23003676F8 /* PlacePhone.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CCA623025E23003676F8 /* PlacePhone.pdf */; };
+		FF89CCAD23025E23003676F8 /* TapLeft1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CCA723025E23003676F8 /* TapLeft1.pdf */; };
+		FF89CCAE23025E23003676F8 /* TapLeft2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CCA823025E23003676F8 /* TapLeft2.pdf */; };
+		FF89CCAF23025E23003676F8 /* PhoneOnSurface.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CCA923025E23003676F8 /* PhoneOnSurface.pdf */; };
+		FF89CCB023025E23003676F8 /* TappingHoldPhone.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CCAA23025E23003676F8 /* TappingHoldPhone.pdf */; };
+		FF89CCBC23025F69003676F8 /* FingerToNose5.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CCB223025F69003676F8 /* FingerToNose5.pdf */; };
+		FF89CCBD23025F69003676F8 /* FingerToNose4.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CCB323025F69003676F8 /* FingerToNose4.pdf */; };
+		FF89CCBE23025F69003676F8 /* KineticHoldPhone-Left.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CCB423025F69003676F8 /* KineticHoldPhone-Left.pdf */; };
+		FF89CCBF23025F69003676F8 /* FingerToNose7.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CCB523025F69003676F8 /* FingerToNose7.pdf */; };
+		FF89CCC023025F69003676F8 /* FingerToNose2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CCB623025F69003676F8 /* FingerToNose2.pdf */; };
+		FF89CCC123025F69003676F8 /* FingerToNose0.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CCB723025F69003676F8 /* FingerToNose0.pdf */; };
+		FF89CCC223025F69003676F8 /* FingerToNose1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CCB823025F69003676F8 /* FingerToNose1.pdf */; };
+		FF89CCC323025F69003676F8 /* FingerToNose9.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CCB923025F69003676F8 /* FingerToNose9.pdf */; };
+		FF89CCC423025F69003676F8 /* FingerToNose8.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CCBA23025F69003676F8 /* FingerToNose8.pdf */; };
+		FF89CCC523025F69003676F8 /* KineticHoldPhone-Right.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF89CCBB23025F69003676F8 /* KineticHoldPhone-Right.pdf */; };
 		FFBBABDF22D3E22000978A9B /* BalanceSectionStep.json in Resources */ = {isa = PBXBuildFile; fileRef = FFBBABDD22D3E21F00978A9B /* BalanceSectionStep.json */; };
 		FFBBABE022D3E22000978A9B /* WalkSectionStep.json in Resources */ = {isa = PBXBuildFile; fileRef = FFBBABDE22D3E21F00978A9B /* WalkSectionStep.json */; };
 /* End PBXBuildFile section */
@@ -98,6 +145,53 @@
 		F8E3B83621BB474F0004284E /* MCTTapButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCTTapButton.swift; sourceTree = "<group>"; };
 		F8E3B83A21BB48690004284E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FF24D12D22D3F707009D8AE3 /* MCTTappingStepObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCTTappingStepObject.swift; sourceTree = "<group>"; };
+		FF89CC6223025803003676F8 /* PantsWPocket.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = PantsWPocket.pdf; sourceTree = "<group>"; };
+		FF89CC6423025803003676F8 /* Walking-12.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Walking-12.pdf"; sourceTree = "<group>"; };
+		FF89CC6523025803003676F8 /* Walking-11.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Walking-11.pdf"; sourceTree = "<group>"; };
+		FF89CC6623025803003676F8 /* Walking-10.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Walking-10.pdf"; sourceTree = "<group>"; };
+		FF89CC6723025803003676F8 /* Walking-9.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Walking-9.pdf"; sourceTree = "<group>"; };
+		FF89CC6823025803003676F8 /* Walking-8.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Walking-8.pdf"; sourceTree = "<group>"; };
+		FF89CC6923025803003676F8 /* Walking-6.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Walking-6.pdf"; sourceTree = "<group>"; };
+		FF89CC6A23025803003676F8 /* Walking-7.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Walking-7.pdf"; sourceTree = "<group>"; };
+		FF89CC6B23025803003676F8 /* Walking-5.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Walking-5.pdf"; sourceTree = "<group>"; };
+		FF89CC6C23025803003676F8 /* Walking-4.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Walking-4.pdf"; sourceTree = "<group>"; };
+		FF89CC6D23025803003676F8 /* Walking-1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Walking-1.pdf"; sourceTree = "<group>"; };
+		FF89CC6E23025803003676F8 /* Walking-3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Walking-3.pdf"; sourceTree = "<group>"; };
+		FF89CC6F23025803003676F8 /* Walking-2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Walking-2.pdf"; sourceTree = "<group>"; };
+		FF89CC7123025803003676F8 /* Balance-8.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Balance-8.pdf"; sourceTree = "<group>"; };
+		FF89CC7223025804003676F8 /* Balance-9.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Balance-9.pdf"; sourceTree = "<group>"; };
+		FF89CC7323025804003676F8 /* Balance-10.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Balance-10.pdf"; sourceTree = "<group>"; };
+		FF89CC7423025804003676F8 /* Balance-11.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Balance-11.pdf"; sourceTree = "<group>"; };
+		FF89CC7523025804003676F8 /* Balance-1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Balance-1.pdf"; sourceTree = "<group>"; };
+		FF89CC7623025804003676F8 /* Balance-2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Balance-2.pdf"; sourceTree = "<group>"; };
+		FF89CC7723025804003676F8 /* Balance-3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Balance-3.pdf"; sourceTree = "<group>"; };
+		FF89CC7823025804003676F8 /* Balance-7.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Balance-7.pdf"; sourceTree = "<group>"; };
+		FF89CC7923025804003676F8 /* Balance-6.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Balance-6.pdf"; sourceTree = "<group>"; };
+		FF89CC7A23025804003676F8 /* Balance-4.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Balance-4.pdf"; sourceTree = "<group>"; };
+		FF89CC7B23025804003676F8 /* Balance-5.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Balance-5.pdf"; sourceTree = "<group>"; };
+		FF89CC7D23025804003676F8 /* PhoneInPocket-2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "PhoneInPocket-2.pdf"; sourceTree = "<group>"; };
+		FF89CC7E23025804003676F8 /* PhoneInPocket-3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "PhoneInPocket-3.pdf"; sourceTree = "<group>"; };
+		FF89CC7F23025804003676F8 /* PhoneInPocket-1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "PhoneInPocket-1.pdf"; sourceTree = "<group>"; };
+		FF89CC8023025804003676F8 /* TurnUpVolume.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = TurnUpVolume.pdf; sourceTree = "<group>"; };
+		FF89CC9E23025D42003676F8 /* HoldPhone-Left.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "HoldPhone-Left.pdf"; sourceTree = "<group>"; };
+		FF89CC9F23025D42003676F8 /* Sitting.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Sitting.pdf; sourceTree = "<group>"; };
+		FF89CCA023025D42003676F8 /* TremorHoldPhone.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = TremorHoldPhone.pdf; sourceTree = "<group>"; };
+		FF89CCA523025E23003676F8 /* F-FlatSurface.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "F-FlatSurface.pdf"; sourceTree = "<group>"; };
+		FF89CCA623025E23003676F8 /* PlacePhone.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = PlacePhone.pdf; sourceTree = "<group>"; };
+		FF89CCA723025E23003676F8 /* TapLeft1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = TapLeft1.pdf; sourceTree = "<group>"; };
+		FF89CCA823025E23003676F8 /* TapLeft2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = TapLeft2.pdf; sourceTree = "<group>"; };
+		FF89CCA923025E23003676F8 /* PhoneOnSurface.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = PhoneOnSurface.pdf; sourceTree = "<group>"; };
+		FF89CCAA23025E23003676F8 /* TappingHoldPhone.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = TappingHoldPhone.pdf; sourceTree = "<group>"; };
+		FF89CCB223025F69003676F8 /* FingerToNose5.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = FingerToNose5.pdf; sourceTree = "<group>"; };
+		FF89CCB323025F69003676F8 /* FingerToNose4.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = FingerToNose4.pdf; sourceTree = "<group>"; };
+		FF89CCB423025F69003676F8 /* KineticHoldPhone-Left.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "KineticHoldPhone-Left.pdf"; sourceTree = "<group>"; };
+		FF89CCB523025F69003676F8 /* FingerToNose7.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = FingerToNose7.pdf; sourceTree = "<group>"; };
+		FF89CCB623025F69003676F8 /* FingerToNose2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = FingerToNose2.pdf; sourceTree = "<group>"; };
+		FF89CCB723025F69003676F8 /* FingerToNose0.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = FingerToNose0.pdf; sourceTree = "<group>"; };
+		FF89CCB823025F69003676F8 /* FingerToNose1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = FingerToNose1.pdf; sourceTree = "<group>"; };
+		FF89CCB923025F69003676F8 /* FingerToNose9.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = FingerToNose9.pdf; sourceTree = "<group>"; };
+		FF89CCBA23025F69003676F8 /* FingerToNose8.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = FingerToNose8.pdf; sourceTree = "<group>"; };
+		FF89CCBB23025F69003676F8 /* KineticHoldPhone-Right.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "KineticHoldPhone-Right.pdf"; sourceTree = "<group>"; };
 		FFBBABDD22D3E21F00978A9B /* BalanceSectionStep.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BalanceSectionStep.json; sourceTree = "<group>"; };
 		FFBBABDE22D3E21F00978A9B /* WalkSectionStep.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = WalkSectionStep.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -195,6 +289,7 @@
 		F8E3B80921BB46250004284E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FF89CC6023024FB9003676F8 /* Images */,
 				CB60DDCE22AB0EE500CD34C7 /* MP4 */,
 				F8E3B80D21BB46590004284E /* ActiveTaskSteps.storyboard */,
 				F8E3B80A21BB46590004284E /* Images.xcassets */,
@@ -252,6 +347,116 @@
 				F8E3B83621BB474F0004284E /* MCTTapButton.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		FF89CC6023024FB9003676F8 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				FF89CCB123025F69003676F8 /* Kinetic Tremor */,
+				FF89CCA423025E23003676F8 /* Tapping */,
+				FF89CC9D23025D42003676F8 /* Tremor */,
+				FF89CC6123025803003676F8 /* Walk and Balance */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		FF89CC6123025803003676F8 /* Walk and Balance */ = {
+			isa = PBXGroup;
+			children = (
+				FF89CC6223025803003676F8 /* PantsWPocket.pdf */,
+				FF89CC6323025803003676F8 /* Walk */,
+				FF89CC7023025803003676F8 /* Balance */,
+				FF89CC7C23025804003676F8 /* PhoneInPocket */,
+				FF89CC8023025804003676F8 /* TurnUpVolume.pdf */,
+			);
+			path = "Walk and Balance";
+			sourceTree = "<group>";
+		};
+		FF89CC6323025803003676F8 /* Walk */ = {
+			isa = PBXGroup;
+			children = (
+				FF89CC6D23025803003676F8 /* Walking-1.pdf */,
+				FF89CC6F23025803003676F8 /* Walking-2.pdf */,
+				FF89CC6E23025803003676F8 /* Walking-3.pdf */,
+				FF89CC6C23025803003676F8 /* Walking-4.pdf */,
+				FF89CC6B23025803003676F8 /* Walking-5.pdf */,
+				FF89CC6923025803003676F8 /* Walking-6.pdf */,
+				FF89CC6A23025803003676F8 /* Walking-7.pdf */,
+				FF89CC6823025803003676F8 /* Walking-8.pdf */,
+				FF89CC6723025803003676F8 /* Walking-9.pdf */,
+				FF89CC6623025803003676F8 /* Walking-10.pdf */,
+				FF89CC6523025803003676F8 /* Walking-11.pdf */,
+				FF89CC6423025803003676F8 /* Walking-12.pdf */,
+			);
+			path = Walk;
+			sourceTree = "<group>";
+		};
+		FF89CC7023025803003676F8 /* Balance */ = {
+			isa = PBXGroup;
+			children = (
+				FF89CC7523025804003676F8 /* Balance-1.pdf */,
+				FF89CC7623025804003676F8 /* Balance-2.pdf */,
+				FF89CC7723025804003676F8 /* Balance-3.pdf */,
+				FF89CC7A23025804003676F8 /* Balance-4.pdf */,
+				FF89CC7B23025804003676F8 /* Balance-5.pdf */,
+				FF89CC7923025804003676F8 /* Balance-6.pdf */,
+				FF89CC7823025804003676F8 /* Balance-7.pdf */,
+				FF89CC7123025803003676F8 /* Balance-8.pdf */,
+				FF89CC7223025804003676F8 /* Balance-9.pdf */,
+				FF89CC7323025804003676F8 /* Balance-10.pdf */,
+				FF89CC7423025804003676F8 /* Balance-11.pdf */,
+			);
+			path = Balance;
+			sourceTree = "<group>";
+		};
+		FF89CC7C23025804003676F8 /* PhoneInPocket */ = {
+			isa = PBXGroup;
+			children = (
+				FF89CC7F23025804003676F8 /* PhoneInPocket-1.pdf */,
+				FF89CC7D23025804003676F8 /* PhoneInPocket-2.pdf */,
+				FF89CC7E23025804003676F8 /* PhoneInPocket-3.pdf */,
+			);
+			path = PhoneInPocket;
+			sourceTree = "<group>";
+		};
+		FF89CC9D23025D42003676F8 /* Tremor */ = {
+			isa = PBXGroup;
+			children = (
+				FF89CC9E23025D42003676F8 /* HoldPhone-Left.pdf */,
+				FF89CC9F23025D42003676F8 /* Sitting.pdf */,
+				FF89CCA023025D42003676F8 /* TremorHoldPhone.pdf */,
+			);
+			path = Tremor;
+			sourceTree = "<group>";
+		};
+		FF89CCA423025E23003676F8 /* Tapping */ = {
+			isa = PBXGroup;
+			children = (
+				FF89CCA523025E23003676F8 /* F-FlatSurface.pdf */,
+				FF89CCA623025E23003676F8 /* PlacePhone.pdf */,
+				FF89CCA723025E23003676F8 /* TapLeft1.pdf */,
+				FF89CCA823025E23003676F8 /* TapLeft2.pdf */,
+				FF89CCA923025E23003676F8 /* PhoneOnSurface.pdf */,
+				FF89CCAA23025E23003676F8 /* TappingHoldPhone.pdf */,
+			);
+			path = Tapping;
+			sourceTree = "<group>";
+		};
+		FF89CCB123025F69003676F8 /* Kinetic Tremor */ = {
+			isa = PBXGroup;
+			children = (
+				FF89CCB223025F69003676F8 /* FingerToNose5.pdf */,
+				FF89CCB323025F69003676F8 /* FingerToNose4.pdf */,
+				FF89CCB423025F69003676F8 /* KineticHoldPhone-Left.pdf */,
+				FF89CCB523025F69003676F8 /* FingerToNose7.pdf */,
+				FF89CCB623025F69003676F8 /* FingerToNose2.pdf */,
+				FF89CCB723025F69003676F8 /* FingerToNose0.pdf */,
+				FF89CCB823025F69003676F8 /* FingerToNose1.pdf */,
+				FF89CCB923025F69003676F8 /* FingerToNose9.pdf */,
+				FF89CCBA23025F69003676F8 /* FingerToNose8.pdf */,
+				FF89CCBB23025F69003676F8 /* KineticHoldPhone-Right.pdf */,
+			);
+			path = "Kinetic Tremor";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,19 +553,66 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF89CCBD23025F69003676F8 /* FingerToNose4.pdf in Resources */,
+				FF89CC9B23025804003676F8 /* PhoneInPocket-1.pdf in Resources */,
 				FFBBABE022D3E22000978A9B /* WalkSectionStep.json in Resources */,
 				F8E3B81921BB46590004284E /* Finger_Tapping.json in Resources */,
+				FF89CC8323025804003676F8 /* Walking-11.pdf in Resources */,
+				FF89CC8423025804003676F8 /* Walking-10.pdf in Resources */,
+				FF89CC8E23025804003676F8 /* Balance-8.pdf in Resources */,
+				FF89CC8C23025804003676F8 /* Walking-3.pdf in Resources */,
+				FF89CCA223025D42003676F8 /* Sitting.pdf in Resources */,
+				FF89CCAB23025E23003676F8 /* F-FlatSurface.pdf in Resources */,
 				F8E3B81621BB46590004284E /* MotorControl.strings in Resources */,
+				FF89CC8123025804003676F8 /* PantsWPocket.pdf in Resources */,
+				FF89CC8923025804003676F8 /* Walking-5.pdf in Resources */,
+				FF89CC8F23025804003676F8 /* Balance-9.pdf in Resources */,
+				FF89CC9823025804003676F8 /* Balance-5.pdf in Resources */,
+				FF89CC9423025804003676F8 /* Balance-3.pdf in Resources */,
+				FF89CC9523025804003676F8 /* Balance-7.pdf in Resources */,
 				F8E3B81221BB46590004284E /* Images.xcassets in Resources */,
+				FF89CC8B23025804003676F8 /* Walking-1.pdf in Resources */,
+				FF89CCA323025D42003676F8 /* TremorHoldPhone.pdf in Resources */,
 				CB60DDCD22AB082B00CD34C7 /* KineticTremorSectionStep.json in Resources */,
+				FF89CCBF23025F69003676F8 /* FingerToNose7.pdf in Resources */,
+				FF89CC8823025804003676F8 /* Walking-7.pdf in Resources */,
+				FF89CC8523025804003676F8 /* Walking-9.pdf in Resources */,
+				FF89CCBE23025F69003676F8 /* KineticHoldPhone-Left.pdf in Resources */,
+				FF89CCC523025F69003676F8 /* KineticHoldPhone-Right.pdf in Resources */,
+				FF89CC8D23025804003676F8 /* Walking-2.pdf in Resources */,
+				FF89CC9223025804003676F8 /* Balance-1.pdf in Resources */,
+				FF89CC8623025804003676F8 /* Walking-8.pdf in Resources */,
+				FF89CC8223025804003676F8 /* Walking-12.pdf in Resources */,
+				FF89CC9023025804003676F8 /* Balance-10.pdf in Resources */,
+				FF89CCC023025F69003676F8 /* FingerToNose2.pdf in Resources */,
+				FF89CC9923025804003676F8 /* PhoneInPocket-2.pdf in Resources */,
+				FF89CCAF23025E23003676F8 /* PhoneOnSurface.pdf in Resources */,
+				FF89CCC223025F69003676F8 /* FingerToNose1.pdf in Resources */,
 				F8E3B81721BB46590004284E /* TremorSectionStep.json in Resources */,
 				F8E3B81321BB46590004284E /* TappingSectionStep.json in Resources */,
+				FF89CC8723025804003676F8 /* Walking-6.pdf in Resources */,
+				FF89CCC323025F69003676F8 /* FingerToNose9.pdf in Resources */,
+				FF89CCAC23025E23003676F8 /* PlacePhone.pdf in Resources */,
 				F8E3B81821BB46590004284E /* Walk_And_Balance.json in Resources */,
+				FF89CCB023025E23003676F8 /* TappingHoldPhone.pdf in Resources */,
+				FF89CC9623025804003676F8 /* Balance-6.pdf in Resources */,
+				FF89CC9A23025804003676F8 /* PhoneInPocket-3.pdf in Resources */,
 				FFBBABDF22D3E22000978A9B /* BalanceSectionStep.json in Resources */,
+				FF89CC9723025804003676F8 /* Balance-4.pdf in Resources */,
 				4498285B21F5216300C1A8C3 /* Walk_30seconds.json in Resources */,
+				FF89CCC123025F69003676F8 /* FingerToNose0.pdf in Resources */,
+				FF89CCAE23025E23003676F8 /* TapLeft2.pdf in Resources */,
+				FF89CC9C23025804003676F8 /* TurnUpVolume.pdf in Resources */,
+				FF89CCAD23025E23003676F8 /* TapLeft1.pdf in Resources */,
+				FF89CC9323025804003676F8 /* Balance-2.pdf in Resources */,
 				F8E3B81421BB46590004284E /* Tremor.json in Resources */,
+				FF89CCC423025F69003676F8 /* FingerToNose8.pdf in Resources */,
+				FF89CCBC23025F69003676F8 /* FingerToNose5.pdf in Resources */,
 				F8E3B81521BB46590004284E /* ActiveTaskSteps.storyboard in Resources */,
 				CB60DDC522AABE9800CD34C7 /* Kinetic_Tremor.json in Resources */,
+				FF89CC8A23025804003676F8 /* Walking-4.pdf in Resources */,
+				FF89CC9123025804003676F8 /* Balance-11.pdf in Resources */,
+				FF89CCA123025D42003676F8 /* HoldPhone-Left.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
