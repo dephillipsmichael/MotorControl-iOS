@@ -107,8 +107,7 @@
                      "type":"animated",
                      "imageNames":["KineticHoldPhone-Left", "FingerToNose4", "FingerToNose5"],
                      "placementType":"topBackground",
-                     "animationDuration": 4,
-                     "animationRepeatCount": 1
+                     "animationDuration": 4
                  },
                  "actions":{
                      "goForward":{
