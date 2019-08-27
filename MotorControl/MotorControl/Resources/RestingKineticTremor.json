@@ -4,196 +4,176 @@
     "shouldHideActions":["goBackward", "skip"],
     "progressMarkers":[],
     "steps":[
-            {
-                "identifier":"TremorSubtask",
-                "type":"subtask",
-                "task": {
-                    "identifier":"Tremor",
-                    "schemaIdentifier":"Tremor",
-                    "steps":[
-                        {
-                            "identifier":"introduction",
-                            "type":"overview",
-                            "title":"Dual Phone Hold",
-                            "text":"In this activity you will be holding the phone in your lap for 30 seconds. You will do this with each hand.  Goal is to measure your tremors in your hand. Then you’ll hold your phone with your pointer finger sticking out sideways. Then touch the tip of your nose with the tip of your finger. Your goal is to be as accurate as possible in touching your nose.",
-                            "permissions":[
-                                {
-                                    "permissionType":"motion",
-                                    "reason":"Access to Motion and Fitness sensors is required to measure the phone's steadiness in your hand.",
-                                    "optional": false
-                                }
-                            ],
-                            "image":{
-                                "type":"fetchable",
-                                "imageName":"HoldPhone-Left",
-                                "placementType":"topBackground"
-                            },
-                            "icons": [
-                                {
-                                    "icon":"ComfortablePlaceToSit",
-                                    "title": "COMFORTABLE PLACE TO SIT"
-                                }
-                            ],
-                            "actions":{
-                                "goForward":{
-                                    "type":"default",
-                                    "buttonTitle":"Get started"
-                                },
-                                "skip":{
-                                    "type":"reminder",
-                                    "reminderIdentifier":"RestingKineticTremor"
-                                }
-                            }
-                        },
-                        {
-                            "identifier": "handSelection",
-                            "type": "handSelection",
-                            "title": "Which hands are you capable of doing this task with?",
-                            "inputFields":[{
-                                "uiHint": "list",
-                                "type": "singleChoice.string",
-                                "choices": [
-                                    {
-                                        "text": "I can only perform this activity with my LEFT hand.",
-                                        "value": "left"
-                                    },
-                                    {
-                                        "text": "I can only perform this activity with my RIGHT hand.",
-                                        "value": "right"
-                                    },
-                                    {
-                                        "text": "I can perform this activity with BOTH hands.",
-                                        "value": "both"
-                                    }
-                                ]
-                            }]
-                        },
-                        {
-                            "identifier":"holdPhoneInstructions",
-                            "type":"instruction",
-                            "title":"Hold the phone still",
-                            "text":"While sitting down with your feet resting flat on the floor, you will be holding the phone still in your lap for 30 seconds. You will do this first with one hand and then with your other hand.",
-                            "image":{
-                                "type":"fetchable",
-                                "imageName": "F-TremorHoldPhone",
-                                "placementType":"topBackground"
-                            },
-                            "actions":{
-                                "goForward":{
-                                    "type":"default",
-                                    "buttonTitle":"Got it"
-                                }
-                            }
-                        },
-                        {
-                            "identifier":"sitDownInstruction",
-                            "type":"instruction",
-                            "title":"Sit down",
-                            "text":"Find a spot to sit where you can have your feet resting flat on the floor.",
-                            "image":{
-                                "type":"fetchable",
-                                "imageName":"F-Sitting",
-                                "placementType":"topBackground"
-                            },
-                            "actions":{
-                                "goForward":{
-                                    "type":"default",
-                                    "buttonTitle":"Got a spot"
-                                }
-                            }
-                        },
-                        {
-                            "identifier":"left",
-                            "type":"transform",
-                            "resourceTransformer": { "resourceName": "TremorSectionStep.json"}
-                        },
-                        {
-                            "identifier":"right",
-                            "type":"transform",
-                            "resourceTransformer": { "resourceName": "TremorSectionStep.json"}
-                        },
-                    ]
+        {
+            "identifier":"introduction",
+            "type":"overview",
+            "title":"Dual Phone Hold",
+            "text":"In this activity you will be holding the phone in your lap for 30 seconds. You will do this with each hand.  Goal is to measure your tremors in your hand. Then you’ll hold your phone with your pointer finger sticking out sideways. Then touch the tip of your nose with the tip of your finger. Your goal is to be as accurate as possible in touching your nose.",
+            "permissions":[
+                {
+                    "permissionType":"motion",
+                    "reason":"Access to Motion and Fitness sensors is required to measure the phone's steadiness in your hand.",
+                    "optional": false
                 }
+            ],
+            "image":{
+                "type":"fetchable",
+                "imageName":"HoldPhone-Left",
+                "placementType":"topBackground"
             },
-            {
-                "identifier":"KineticTremorSubtask",
-                "type":"subtask",
-                "task": {
-                    "identifier":"KineticTremor",
-                    "schemaIdentifier":"KineticTremor",
-                    "steps":[
-                        {
-                            "identifier":"holdPhoneInstructions",
-                            "type":"instruction",
-                            "title":"Hold phone with index finger pointing out",
-                            "text":"Hold your phone with your pointer finger sticking out sideways from the phone",
-                            "image":{
-                                "type":"fetchable",
-                                "imageName": "FingerToNose2",
-                                "placementType":"topBackground"
-                            },
-                            "actions":{
-                                "goForward":{
-                                    "type":"default",
-                                    "buttonTitle":"Pointing index finger"
-                                }
-                            }
-                        },
-                        {
-                            "identifier":"howToTouchNoseInstructions",
-                            "type":"instruction",
-                            "title":"How to touch your nose",
-                            "text":"Hold your arm straight out beside you, then bend your elbow to bring the tip of your finger to the tip of your nose. Try to touch precisely if you can.",
-                            "image":{
-                                "type":"animated",
-                                "imageNames":["KineticHoldPhone-Left", "FingerToNose4", "FingerToNose5"],
-                                "placementType":"topBackground",
-                                "animationDuration": 3,
-                                "animationRepeatCount": 3
-                            },
-                            "actions":{
-                                "goForward":{
-                                    "type":"default",
-                                    "buttonTitle":"Got it"
-                                }
-                            }
-                        },
-                        {
-                            "identifier":"left",
-                            "type":"transform",
-                            "resourceTransformer": { "resourceName": "KineticTremorSectionStep.json"}
-                        },
-                        {
-                            "identifier":"right",
-                            "type":"transform",
-                            "resourceTransformer": { "resourceName": "KineticTremorSectionStep.json"}
-                        },
-                    ]
+            "icons": [
+                {
+                    "icon":"ComfortablePlaceToSit",
+                    "title": "COMFORTABLE PLACE TO SIT"
                 }
+            ],
+            "actions":{
+                "goForward":{
+                    "type":"default",
+                    "buttonTitle":"Get started"
+                },
+                "skip":{
+                    "type":"reminder",
+                    "reminderIdentifier":"RestingKineticTremor"
+                }
+            }
+        },
+        {
+            "identifier": "handSelection",
+            "type": "handSelection",
+            "title": "Which hands are you capable of doing this task with?",
+            "inputFields":[{
+                "uiHint": "list",
+                "type": "singleChoice.string",
+                "choices": [
+                    {
+                        "text": "I can only perform this activity with my LEFT hand.",
+                        "value": "left"
+                    },
+                    {
+                        "text": "I can only perform this activity with my RIGHT hand.",
+                        "value": "right"
+                    },
+                    {
+                        "text": "I can perform this activity with BOTH hands.",
+                        "value": "both"
+                    }
+                ]
+            }]
+        },
+        {
+            "identifier":"holdPhoneInstructions",
+            "type":"instruction",
+            "title":"Hold the phone still",
+            "text":"While sitting down with your feet resting flat on the floor, you will be holding the phone still in your lap for 30 seconds. You will do this first with one hand and then with your other hand.",
+            "image":{
+                "type":"fetchable",
+                "imageName": "F-TremorHoldPhone",
+                "placementType":"topBackground"
+            },
+            "actions":{
+                "goForward":{
+                    "type":"default",
+                    "buttonTitle":"Got it"
+                }
+            }
+        },
+        {
+            "identifier":"sitDownInstruction",
+            "type":"instruction",
+            "title":"Sit down",
+            "text":"Find a spot to sit where you can have your feet resting flat on the floor.",
+            "image":{
+                "type":"fetchable",
+                "imageName":"F-Sitting",
+                "placementType":"topBackground"
+            },
+            "actions":{
+                "goForward":{
+                    "type":"default",
+                    "buttonTitle":"Got a spot"
+                }
+            }
+        },
+        {
+            "identifier":"restingLeft",
+            "type":"transform",
+            "resourceTransformer": { "resourceName": "TremorSectionStep.json"}
+        },
+        {
+            "identifier":"restingRight",
+            "type":"transform",
+            "resourceTransformer": { "resourceName": "TremorSectionStep.json"}
+        },
+        {
+            "identifier":"holdPhoneInstructions2",
+            "type":"instruction",
+            "title":"Hold phone with index finger pointing out",
+            "text":"Hold your phone with your pointer finger sticking out sideways from the phone",
+            "image":{
+                "type":"fetchable",
+                "imageName": "FingerToNose2",
+                "placementType":"topBackground"
+            },
+            "actions":{
+                "goForward":{
+                    "type":"default",
+                    "buttonTitle":"Pointing index finger"
+                }
+            }
+        },
+        {
+            "identifier":"howToTouchNoseInstructions",
+            "type":"instruction",
+            "title":"How to touch your nose",
+            "text":"Hold your arm straight out beside you, then bend your elbow to bring the tip of your finger to the tip of your nose. Try to touch precisely if you can.",
+            "image":{
+                "type":"animated",
+                "imageNames":["KineticHoldPhone-Left", "FingerToNose4", "FingerToNose5"],
+                "placementType":"topBackground",
+                "animationDuration": 3,
+                "animationRepeatCount": 3
+            },
+            "actions":{
+                "goForward":{
+                    "type":"default",
+                    "buttonTitle":"Got it"
+                }
+            }
+        },
+        {
+            "identifier":"kineticLeft",
+            "type":"transform",
+            "resourceTransformer": { "resourceName": "KineticTremorSectionStep.json"}
+        },
+        {
+            "identifier":"kineticRight",
+            "type":"transform",
+            "resourceTransformer": { "resourceName": "KineticTremorSectionStep.json"}
+        },
+         {
+             "identifier":"completion",
+             "type":"completion",
+             "title":"Great job!",
+             "text":"TREMOR_COMPLETION",
+             "image":{
+                 "type":"fetchable",
+                 "imageName":"Completion-Tremor",
+                 "placementType":"topBackground"
              },
-             {
-                 "identifier":"completion",
-                 "type":"completion",
-                 "title":"Great job!",
-                 "text":"TREMOR_COMPLETION",
-                 "image":{
-                     "type":"fetchable",
-                     "imageName":"Completion-Tremor",
-                     "placementType":"topBackground"
-                 },
-                 "viewTheme":{
-                     "viewIdentifier":"Completion",
-                     "storyboardIdentifier":"ActiveTaskSteps"
-                 },
-                 "spokenInstructions":{
-                     "start":"Great job, you are done with the Tremor test."
-                 },
-                 "actions": {
-                     "goForward":{
-                        "type":"default",
-                        "buttonTitle":"Done"
-                     }
+             "viewTheme":{
+                 "viewIdentifier":"Completion",
+                 "storyboardIdentifier":"ActiveTaskSteps"
+             },
+             "spokenInstructions":{
+                 "start":"Great job, you are done with the Tremor test."
+             },
+             "actions": {
+                 "goForward":{
+                    "type":"default",
+                    "buttonTitle":"Done"
                  }
              }
-        ]
+         }
+    ]
 }
