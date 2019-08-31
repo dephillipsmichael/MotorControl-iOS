@@ -40,19 +40,34 @@ extension RSDSectionStepObject: RSDNavigationSkipRule, RSDNavigationRule {
     
     /// Returns `true` if this step should be skipped and `false` otherwise.
     public func shouldSkipStep(with result: RSDTaskResult?, isPeeking: Bool) -> Bool {
-        guard let myHand = MCTHandSelection(rawValue: self.identifier),
+        
+        // This edge case fix is here to support a single resting/kinetic
+        // tremor task that has multiple left/right hand steps.
+        // In this case, left/right identifier will be prefixed with
+        // either "resting" or "kinetic"
+        let handIdentifier = self.identifier.replacingOccurrences(of: "resting", with: "").replacingOccurrences(of: "kinetic", with: "").lowercased()
+        
+        guard let myHand = MCTHandSelection(rawValue: handIdentifier),
               let handSelectionResult = result?.findResult(with: MCTHandSelectionDataSource.selectionKey) as? RSDCollectionResult,
               let handOrder = handSelectionResult.findAnswerResult(with: MCTHandSelectionDataSource.handOrderKey)?.value as? [String]
             else {
                 return false
         }
         
-        if handOrder.first! == self.identifier {
+        if handOrder.first! == handIdentifier {
             let previousResultForThisStep = result?.findResult(with: self.identifier)
             // If there is a previous result for this step, we should skip this step.
             return previousResultForThisStep != nil
-        } else if handOrder.last! == self.identifier, let otherHand = myHand.otherHand {
-            let previousResultForOther = result?.findResult(with: otherHand.stringValue)
+        } else if handOrder.last! == handIdentifier, let otherHand = myHand.otherHand {
+            
+            var otherHandIdentifier = otherHand.stringValue
+            if self.identifier.contains("resting") {
+                otherHandIdentifier = "resting\(otherHand.stringValue.capitalized)"
+            } else if self.identifier.contains("kinetic") {
+                otherHandIdentifier = "kinetic\(otherHand.stringValue.capitalized)"
+            }
+            
+            let previousResultForOther = result?.findResult(with: otherHandIdentifier)
             // If there is not a previous result for the other step, we sholud skip this step.
             return previousResultForOther == nil
         }
@@ -70,13 +85,27 @@ extension RSDSectionStepObject: RSDNavigationSkipRule, RSDNavigationRule {
                 return nil
         }
         
-        if handOrder.first! == self.identifier,
-            handOrder.last! != self.identifier {
+        // This edge case fix is here to support a single resting/kinetic
+        // tremor task that has multiple left/right hand steps.
+        // In this case, left/right identifier will be prefixed with
+        // either "resting" or "kinetic"
+        let handIdentifier = self.identifier.replacingOccurrences(of: "resting", with: "").replacingOccurrences(of: "kinetic", with: "").lowercased()
+        
+        if handOrder.first! == handIdentifier,
+            handOrder.last! != handIdentifier {
+            
+            var lastHandIdentifier = handOrder.last!
+            if self.identifier.contains("resting") {
+                lastHandIdentifier = "resting\(handOrder.last!.capitalized)"
+            } else if self.identifier.contains("kinetic") {
+                lastHandIdentifier = "kinetic\(handOrder.last!.capitalized)"
+            }
+            
             // if this step should go first, and there is a step after it return the step after it,
             // and the step after it hasn't run yet, we return the next steps identifier
-            let previousResultForOtherStep = result?.findResult(with: handOrder.last!)
+            let previousResultForOtherStep = result?.findResult(with: lastHandIdentifier)
             if previousResultForOtherStep == nil {
-                return handOrder.last!
+                return lastHandIdentifier
             }
         }
         

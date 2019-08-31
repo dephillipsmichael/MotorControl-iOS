@@ -77,6 +77,23 @@ extension MCTHandStepController {
         if let handOrder = handOrder() {
             var taskPath: RSDPathComponent? = self.stepViewModel.parent
             repeat {
+                // This edge case fix is here to support a single resting/kinetic
+                // tremor task that has multiple left/right hand steps.
+                // In this case, left/right identifier will be prefixed with
+                // either "resting" or "kinetic"
+                if self.stepViewModel.identifier.contains("resting") ||
+                    (self.stepViewModel.parentTaskPath as? RSDStepViewModel)?.identifier.contains("resting") ?? false {
+                    if taskPath?.taskResult.findResult(with: "resting\(handOrder.first!.stringValue.capitalized)") != nil {
+                        return handOrder.last
+                    }
+                }
+                if self.stepViewModel.identifier.contains("kinetic") ||
+                    (self.stepViewModel.parentTaskPath as? RSDStepViewModel)?.identifier.contains("kinetic") ?? false {
+                    if taskPath?.taskResult.findResult(with: "kinetic\(handOrder.first!.stringValue.capitalized)") != nil {
+                        return handOrder.last
+                    }
+                }
+                
                 if taskPath?.taskResult.findResult(with: handOrder.first!.stringValue) != nil {
                     return handOrder.last
                 }
@@ -91,9 +108,17 @@ extension MCTHandStepController {
     
     /// Returns which hand is being used for this step.
     public func whichHand() -> MCTHandSelection? {
-        if let handIdentifier = self.stepViewModel?.parentTaskPath?.identifier,
-            let hand = MCTHandSelection(rawValue: handIdentifier) {
-            return hand
+        if let handIdentifier = self.stepViewModel?.parentTaskPath?.identifier {
+            
+            // This edge case fix is here to support a single resting/kinetic
+            // tremor task that has multiple left/right hand steps.
+            // In this case, left/right identifier will be prefixed with
+            // either "resting" or "kinetic"
+            let finalHandIdentifier = handIdentifier.replacingOccurrences(of: "resting", with: "").replacingOccurrences(of: "kinetic", with: "").lowercased()
+            
+            if let hand = MCTHandSelection(rawValue: finalHandIdentifier) {
+                return hand
+            }
         }
         return nextHand()
     }
