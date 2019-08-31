@@ -8,7 +8,7 @@
             "identifier":"introduction",
             "type":"overview",
             "title":"Dual Phone Hold",
-            "text":"In this activity you will be holding the phone in your lap for 30 seconds. You will do this with each hand.  Goal is to measure your tremors in your hand. Then you’ll hold your phone with your pointer finger sticking out sideways. Then touch the tip of your nose with the tip of your finger. Your goal is to be as accurate as possible in touching your nose.",
+            "text":"In this challenge you will be holding the phone while doing 2 activities. The first is to keep your hand still in your lap, the second is to move your arm to touch the tip of your nose with the tip of your finger as accurately as you can. Please perform this activity with both hands if you can.",
             "permissions":[
                 {
                     "permissionType":"motion",
@@ -65,7 +65,7 @@
             "identifier":"holdPhoneInstructions",
             "type":"instruction",
             "title":"Hold the phone still",
-            "text":"While sitting down with your feet resting flat on the floor, you will be holding the phone still in your lap for 30 seconds. You will do this first with one hand and then with your other hand.",
+            "text":"While sitting down with your feet resting flat on the floor, please hold the phone still in your lap for 30 seconds. You will do this first with one hand and then with your other hand if you can.",
             "image":{
                 "type":"fetchable",
                 "imageName": "F-TremorHoldPhone",
@@ -166,7 +166,7 @@
                  "storyboardIdentifier":"ActiveTaskSteps"
              },
              "spokenInstructions":{
-                 "start":"Great job, you are done with the Tremor test."
+                 "start":"Great job, you are done with the Dual Phone Hold test."
              },
              "actions": {
                  "goForward":{
