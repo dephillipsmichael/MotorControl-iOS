@@ -2,18 +2,18 @@
     "identifier":"Tapping",
     "usesTrackedData":true,
     "shouldHideActions":["goBackward", "skip"],
-    "progressMarkers":["fingerTappingInstructions", "phoneOnTableInstruction", "tappingFirstHandInstruction", "completion"],
+    "progressMarkers":[],
     "steps":[
              {
                 "identifier":"introduction",
                 "type":"overview",
                 "title":"Finger Tapping",
-                "text":"In this activity we will measure your finger tapping speed with each hand.",
+                "text":"In this activity, we will measure your finger tapping speed and accuracy with each hand.",
                 "permissions":[
                                {
                                 "permissionType":"motion",
                                 "reason":"Access to Motion and Fitness sensors is used to measure the phone's orientation.",
-                                "optional": false
+                                "optional":true
                                }
                             ],
                  "image":{
@@ -43,7 +43,7 @@
                 "identifier":"fingerTappingInstructions",
                 "type":"instruction",
                 "title":"You will finger tap for 30 seconds with each hand",
-                "text":"Speed and accuracy of finger tapping is a measure of motor control. This activity measures your tapping speed for each hand. Your medical provider may measure this differently.",
+                "text":"Speed and accuracy of finger tapping can show us the fine motor control of your hands. Your doctor might measure this differently.",
                 "image":{
                      "type":"animated",
                      "imageNames":["TapLeft1", "TapLeft2"],
@@ -59,28 +59,7 @@
              },
              {
                 "identifier": "handSelection",
-                "type": "handSelection",
-                "title": "Which hands are you capable of doing this task with?",
-                "inputFields": [
-                                {
-                                "uiHint": "list",
-                                "type": "singleChoice.string",
-                                "choices": [
-                                    {
-                                        "text": "I can only perform this activity with my LEFT hand.",
-                                        "value": "left"
-                                    },
-                                    {
-                                        "text": "I can only perform this activity with my RIGHT hand.",
-                                        "value": "right"
-                                    },
-                                    {
-                                        "text": "I can perform this activity with BOTH hands.",
-                                        "value": "both"
-                                    }
-                                ]
-                                }
-                ]
+                "type": "handSelection"
              },
              {
                 "identifier":"phoneOnTableInstruction",
@@ -104,7 +83,7 @@
                 "identifier":"tappingFirstHandInstruction",
                 "type":"handInstruction",
                 "title":"First, tap with your %@ hand",
-                "text": "Alternate tapping the buttons that appear with your index and middle finger of your %@ HAND. Keep tapping for 30 seconds for as fast as you can.",
+                "text": "Alternate tapping the buttons that appear with your first and middle finger on your %@ HAND. Keep tapping for 30 seconds and as fast as you can.",
                 "image": {
                     "type":"animated",
                     "imageNames": ["TapLeft1", "TapLeft2"],
@@ -132,7 +111,7 @@
                  "identifier":"completion",
                  "type":"completion",
                  "title":"Great job!",
-                 "text":"You just completed",
+                 "text":"You just completed the Tapping activity.",
                  "image":{
                      "type":"fetchable",
                      "imageName":"Completion-FingerTapping",
@@ -141,14 +120,6 @@
                  "viewTheme":{
                      "viewIdentifier":"Completion Tapping",
                      "storyboardIdentifier":"ActiveTaskSteps"
-                 },
-                 "colorMapping":{
-                     "type": "placementMapping",
-                     "placement": {
-                         "header": "successGreen",
-                         "body": "white",
-                         "footer": "white"
-                     }
                  },
                  "actions": {
                      "goForward":{

@@ -47,4 +47,17 @@ public class MCTActiveStepObject : RSDActiveUIStepObject {
         get { return true }
         set {} // ignored
     }
+    
+    #if os(iOS)
+    
+    public func instantiateViewController(with parent: RSDPathComponent?) -> (UIViewController & RSDStepController)? {
+        switch self.stepType {
+        case .countdown:
+            return MCTCountdownStepViewController(step: self, parent: parent)
+        default:
+            return MCTActiveStepViewController(step: self, parent: parent)
+        }
+    }
+    
+    #endif
 }

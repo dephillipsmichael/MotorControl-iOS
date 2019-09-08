@@ -77,7 +77,15 @@ import Foundation
         let designSystem = self.designSystem ?? RSDDesignSystem()
         let colorTile = designSystem.colorRules.palette.secondary.normal
         self.backgroundColor = colorTile.color
-        let textColor = designSystem.colorRules.textColor(on: colorTile, for: .heading3)
-        self.setTitleColor(textColor, for: .normal)
+        
+        // Set the title color for each of the states used by this button
+        let states: [RSDControlState] = [.normal, .highlighted, .disabled]
+        states.forEach {
+            let titleColor = designSystem.colorRules.roundedButtonText(on: colorTile, with: .primary, forState: $0)
+            setTitleColor(titleColor, for: $0.controlState)
+        }
+        
+        // Set the title font to the font for a rounded button.
+        titleLabel?.font = designSystem.fontRules.buttonFont(for: .primary, state: .normal)
     }
 }

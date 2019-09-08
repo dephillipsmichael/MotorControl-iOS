@@ -36,23 +36,6 @@
 
 import UIKit
 
-/// Create a tapping step that will instantiate the tapping result and can load the storyboard view controller.
-public class MCTTappingStepObject: MCTActiveStepObject, RSDStepViewControllerVendor {
-    
-    /// Returns a new instance of a `MCTTappingResultObject`.
-    public override func instantiateStepResult() -> RSDResult {
-        return MCTTappingResultObject(identifier: self.identifier)
-    }
-    
-    /// By default, returns the task view controller from the storyboard.
-    public func instantiateViewController(with parent: RSDPathComponent?) -> (UIViewController & RSDStepController)? {
-        let bundle = Bundle(for: MCTTappingStepViewController.self)
-        let storyboard = UIStoryboard(name: "ActiveTaskSteps", bundle: bundle)
-        let vc = storyboard.instantiateViewController(withIdentifier: "Tapping") as? MCTTappingStepViewController
-        vc?.stepViewModel = vc?.instantiateStepViewModel(for: self, with: parent)
-        return vc
-    }
-}
 
 /// The tapping step view controller sets up gesture listeners that are used to track the button taps.
 public class MCTTappingStepViewController: MCTActiveStepViewController {
@@ -65,6 +48,9 @@ public class MCTTappingStepViewController: MCTActiveStepViewController {
     
     /// Label for tracking the tapping count.
     @IBOutlet public var tappingCountLabel: UILabel!
+    
+    /// Label for the "tap count" unit label.
+    @IBOutlet public var tappingUnitLabel: UILabel!
     
     /// UIGestureRecognizer for taps outside the buttons.
     var touchDownRecognizer: UIGestureRecognizer!
@@ -115,24 +101,18 @@ public class MCTTappingStepViewController: MCTActiveStepViewController {
         // Hide the next button to begin with.
         self.nextButton?.isHidden = true
     }
-    
-    /// Override update unit label text to do nothing because the unit
-    /// label doesn't change after it is set.
-    override open func updateUnitLabelText() {
-        
-    }
-    
+
     /// Override view will appear to set the unit label text.
     override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.unitLabel?.text = Localization.localizedString("TAP_COUNT_LABEL")
+        self.tappingUnitLabel?.text = Localization.localizedString("TAP_COUNT_LABEL")
         self.nextButton?.alpha = 0
         self._setContinueButtonLabel()
     }
     
     private func _setContinueButtonLabel() {
-        let handOrder = self.handOrder()!
-        let hand = self.whichHand()!
+        let handOrder = self.handOrder() ?? [.right]
+        let hand = self.whichHand() ?? .right
         var buttonTitle: String? = nil
         if hand != handOrder.last,
            let otherHand = hand.otherHand {
@@ -153,26 +133,13 @@ public class MCTTappingStepViewController: MCTActiveStepViewController {
         _buttonRect2 = self.view.convert(rightButton.bounds, from: rightButton)
     }
     
-    /// Override the timer to check if finished.
-    override public func timerFired() {
-        guard let stepDuration = self.activeStep?.duration else { return }
+    open override func setupViews() {
+        super.setupViews()
         
-        let timestamp = ProcessInfo.processInfo.systemUptime
-        let duration = timestamp - _tappingStart
-        if duration > stepDuration {
-            tappingFinished(timestamp)
-        }
-    }
-    
-    /// Override to return the instruction with the formatted text replaced.
-    override public func spokenInstruction(at duration: TimeInterval) -> String? {
-        guard let textFormat = super.spokenInstruction(at: duration) else { return nil }
-        guard let direction = self.whichHand()?.rawValue.uppercased() else { return textFormat }
-        // TODO: rkolmos 04/09/2018 localize and standardize with java implementation
-        return String.localizedStringWithFormat(textFormat, direction)
+        tappingCountLabel?.font = self.designSystem.fontRules.font(for: .largeNumber, compatibleWith: traitCollection)
+        tappingUnitLabel?.font = self.designSystem.fontRules.baseFont(for: .largeHeader)  // NOT DYNAMIC
     }
 
-    
     /// Update the step result associated with this step view controller.
     func updateTappingResult() {
         
@@ -210,10 +177,11 @@ public class MCTTappingStepViewController: MCTActiveStepViewController {
     
     /// Handle the touch down event.
     func receivedTouch(_ touch: UITouch, on button: MCTTappingButtonIdentifier) {
-        guard !_expired, _tappingStart != 0 else { return }
+        guard !_expired, _tappingStart != 0, let clock = self.clock else { return }
 
         // create the sample and add to queue.
-        let sample = MCTTappingSample(uptime: touch.timestamp,
+        
+        let sample = MCTTappingSample(uptime: clock.relativeUptime(to: touch.timestamp),
                                       timestamp: touch.timestamp - _tappingStart,
                                       stepPath: self.stepViewModel.stepPath,
                                       buttonIdentifier: button,
@@ -251,45 +219,29 @@ public class MCTTappingStepViewController: MCTActiveStepViewController {
     /// Update the sample that is being held as the last sample for each button.
     func updateLastSample(_ timestamp: TimeInterval, on button: MCTTappingButtonIdentifier) {
         guard let lastSample = _lastSample[button],
-              let idx = _samples.lastIndex(where: { $0.uptime == lastSample.uptime && $0.buttonIdentifier == button })
+              let idx = _samples.lastIndex(where: { $0.uptime == lastSample.uptime && $0.buttonIdentifier == button }),
+              let clock = self.clock
             else {
                 return
         }
         var sample = lastSample
         _lastSample[button] = nil
-        sample.duration = timestamp - sample.uptime
+        sample.duration = clock.relativeUptime(to: timestamp) - sample.uptime
         _samples.replaceSubrange(idx...idx, with: [sample])
     }
     
-    /// Finish the tapping test.
-    func tappingFinished(_ timestamp: TimeInterval) {
-        
+    override public func timerFinished(_ duration: TimeInterval) {
+
         // update the results
         _expired = true
-        updateLastSample(timestamp, on: .left)
-        updateLastSample(timestamp, on: .right)
-        updateTappingResult()
-        stop()
-
-        // Check if should go forward automatically (or if the next button is nil).
-        if (self.activeStep?.commands.contains(.continueOnFinish) ?? (self.nextButton == nil))  {
-            self.goForward()
-        } else {
-            
-            // Hide the left/right buttons and show the next button.
-            self.nextButton!.alpha = 0
-            self.nextButton!.isHidden = false
-            UIView.animate(withDuration: 0.2) {
-                self.leftButton.alpha = 0
-                self.rightButton.alpha = 0
-                self.nextButton!.alpha = 1
-            }
-
-            // Disable the next button to guard against accidental hit.
-            self.momentarilyDisableButton(self.nextButton!)
-            // Speak the end command
-            self.speakEndCommand { }
+        if let startSystemUptime = self.clock?.startSystemUptime {
+            let timestamp = startSystemUptime + duration
+            updateLastSample(timestamp, on: .left)
+            updateLastSample(timestamp, on: .right)
         }
+        updateTappingResult()
+        
+        super.timerFinished(duration)
     }
 
     // MARK: buttonAction
@@ -303,6 +255,7 @@ public class MCTTappingStepViewController: MCTActiveStepViewController {
         if _tappingStart == 0 {
             _hitButtonCount = 0
             _tappingStart = touch.timestamp
+            self.clock = RSDClock()
             updateTappingResult()
             start()
         }

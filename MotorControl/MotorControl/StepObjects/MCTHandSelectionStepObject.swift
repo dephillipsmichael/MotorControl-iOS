@@ -34,10 +34,43 @@
 import Foundation
 
 /// A Subclass of RSDFormUIStepObject which uses MCTHandSelectionDataSource.
-public class MCTHandSelectionStepObject : RSDFormUIStepObject {
+public class MCTHandSelectionStepObject : RSDUIStepObject, RSDFormUIStep {
+    
+    public var inputFields: [RSDInputField] {
+        return [choiceField]
+    }
+
+    public private(set) var choiceField: RSDChoiceInputFieldObject!
 
     override public func instantiateDataSource(with parent: RSDPathComponent?, for supportedHints: Set<RSDFormUIHint>) -> RSDTableDataSource? {
         return MCTHandSelectionDataSource(step: self, parent: parent, supportedHints: supportedHints)
+    }
+    
+    override public func decode(from decoder: Decoder, for deviceType: RSDDeviceType?) throws {
+        try super.decode(from: decoder, for: deviceType)
+        
+        // Set up the choices.
+        let choiceValues = ["left", "right", "both"]
+        let choices = try choiceValues.map {
+            try RSDChoiceObject<String>(value: $0,
+                                    text: Localization.localizedString("HAND_SELECTION_CHOICE_\($0.uppercased())"))
+        }
+        choiceField = RSDChoiceInputFieldObject(identifier: self.identifier, choices: choices, dataType: .collection(.singleChoice, .string), uiHint: .list, prompt: nil, defaultAnswer: "both")
+        choiceField.isOptional = false
+        
+        // Set up the title if not defined.
+        if self.title == nil && self.text == nil {
+            self.title = Localization.localizedString("HAND_SELECTION_TITLE")
+        }
+    }
+    
+    public override func copyInto(_ copy: RSDUIStepObject) {
+        super.copyInto(copy)
+        guard let step = copy as? MCTHandSelectionStepObject else {
+            assertionFailure("Expecting the copy to be the same class as self.")
+            return
+        }
+        step.choiceField = self.choiceField.copy(with: step.identifier)
     }
 }
 
@@ -71,7 +104,7 @@ public class MCTHandSelectionDataSource : RSDFormStepDataSourceObject {
     override open var initialResult : RSDCollectionResult? {
         // TODO: syoung 05/06/2019 Replace user defaults with data tracking.
         let defaults = UserDefaults.standard
-        guard let handSelection = defaults.string(forKey: lastHandSelectionKey) else { return nil }
+        let handSelection = defaults.string(forKey: lastHandSelectionKey) ?? MCTHandSelection.both.rawValue
         var ret = self.instantiateCollectionResult()
         var answerResult = RSDAnswerResultObject(identifier: MCTHandSelectionDataSource.selectionKey, answerType: .string)
         answerResult.value = handSelection

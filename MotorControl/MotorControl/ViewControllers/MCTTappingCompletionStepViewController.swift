@@ -60,9 +60,25 @@ open class MCTTappingCompletionStepViewController : RSDStepViewController {
     /// and update the labels text.
     override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+
+        rightCountLabel.font = self.designSystem.fontRules.font(for: .smallNumber, compatibleWith: traitCollection)
+        leftCountLabel.font = self.designSystem.fontRules.font(for: .smallNumber, compatibleWith: traitCollection)
+        rightUnitLabel.font = self.designSystem.fontRules.baseFont(for: .small)
+        leftUnitLabel.font = self.designSystem.fontRules.baseFont(for: .small)
+        
         let results = _getTappingResults()
         self._hideViews(shouldHideLeft: results.leftCount == nil, shouldHideRight: results.rightCount == nil)
         self.updateLabels(leftCount: results.leftCount, rightCount: results.rightCount)
+    }
+    
+    open override func setColorStyle(for placement: RSDColorPlacement, background: RSDColorTile) {
+        super.setColorStyle(for: placement, background: background)
+        if placement == .body {
+            rightCountLabel.textColor = self.designSystem.colorRules.textColor(on: background, for: .smallNumber)
+            leftCountLabel.textColor = self.designSystem.colorRules.textColor(on: background, for: .smallNumber)
+            rightUnitLabel.textColor = self.designSystem.colorRules.textColor(on: background, for: .small)
+            leftUnitLabel.textColor = self.designSystem.colorRules.textColor(on: background, for: .small)
+        }
     }
     
     /// Updates the text of both the labels displaying the tap count numbers, and the
@@ -103,14 +119,14 @@ open class MCTTappingCompletionStepViewController : RSDStepViewController {
     // Hides the left and right results labels depinding on whether or not
     // they should be hidden.
     private func _hideViews(shouldHideLeft: Bool, shouldHideRight: Bool) {
-        self.leftHeightConstraint.constant = shouldHideLeft ? CGFloat(0) : CGFloat(80)
-        self.leftCountLabel.isHidden = shouldHideLeft
-        self.leftUnitLabel.isHidden = shouldHideLeft
-        
-        self.rightHeightConstraint.constant = shouldHideRight ? CGFloat(0) : CGFloat(80)
-        self.rightCountLabel.isHidden = shouldHideRight
-        self.rightUnitLabel.isHidden = shouldHideRight
-        self.labelHeightEqualityConstraint.isActive = !(shouldHideLeft || shouldHideRight)
+        if shouldHideLeft {
+            self.leftCountLabel.removeFromSuperview()
+            self.leftUnitLabel.removeFromSuperview()
+        }
+        if shouldHideRight {
+            self.rightCountLabel.removeFromSuperview()
+            self.rightUnitLabel.removeFromSuperview()
+        }
         self.view.setNeedsLayout()
     }
     

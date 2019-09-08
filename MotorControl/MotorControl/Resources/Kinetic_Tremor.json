@@ -8,21 +8,18 @@
                 "identifier":"introduction",
                 "type":"overview",
                 "title":"Finger-to-Nose",
-                "text":"In this activity, you’ll hold your phone with your pointer finger sticking out sideways. Then touch the tip of your nose with the tip of your finger. Your goal is to be as accurate as possible in touching your nose.",
+                "text":"In this activity, you’ll hold your phone beside you at arm’s length. You’ll hold your phone with your pointer finger sticking out sideways. Then touch the tip of your nose with the tip of your finger. You will do this repeatedly for 30 seconds.  Our goal is to measure your hand movement during the arm swing and then during the precise movement when you touch finger-to-nose.",
                 "permissions":[
                                {
                                 "permissionType":"motion",
-                                "reason":"Access to Motion and Fitness sensors is required to measure the phone's steadiness in your hand.",
-                                "optional": false
+                                "reason":"Access to Motion and Fitness sensors is required to measure the phone's steadiness in your hand."
                                }
                             ],
-                "image":{
-                    "type":"animated",
-                    "imageNames":["KineticHoldPhone-Left", "FingerToNose4", "FingerToNose5"],
-                    "placementType":"topBackground",
-                    "animationDuration": 3,
-                    "animationRepeatCount": 3
-                },
+                 "image":{
+                     "type":"fetchable",
+                     "imageName":"FingerToNose9",
+                     "placementType":"topBackground"
+                 },
                 "icons": [
                           {
                             "icon":"SpaceToMoveYourArmsRose",
@@ -48,13 +45,11 @@
                  "identifier":"eachHandInstructions",
                  "type":"instruction",
                  "title":"Each hand for 30 seconds",
-                 "text":"We will do this finger-to-nose motion repeatedly for 30 seconds with one hand, and do 30 seconds with your other hand.",
+                 "text":"We will do this finger-to-nose motion repeatedly for 30 seconds with one hand, and then for 30 seconds with your other hand.",
                  "image":{
-                     "type":"animated",
-                     "imageNames":["KineticHoldPhone-Left", "FingerToNose4", "FingerToNose5"],
-                     "placementType":"topBackground",
-                     "animationDuration": 3,
-                     "animationRepeatCount": 3
+                     "type":"fetchable",
+                     "imageName": "FingerToNose4",
+                     "placementType":"topBackground"
                  },
                  "actions":{
                      "goForward":{
@@ -65,26 +60,7 @@
              },
              {
                  "identifier": "handSelection",
-                 "type": "handSelection",
-                 "title": "Which hands are you capable of doing this task with?",
-                 "inputFields":[{
-                     "uiHint": "list",
-                     "type": "singleChoice.string",
-                     "choices": [
-                         {
-                             "text": "I can only perform this activity with my LEFT hand.",
-                             "value": "left"
-                         },
-                         {
-                             "text": "I can only perform this activity with my RIGHT hand.",
-                             "value": "right"
-                         },
-                         {
-                             "text": "I can perform this activity with BOTH hands.",
-                             "value": "both"
-                         }
-                     ]
-                 }]
+                 "type": "handSelection"
              },
              {
                 "identifier":"sitDownInstruction",
@@ -92,9 +68,11 @@
                 "title":"Sit down",
                 "text":"Find a spot to sit where you can have your feet resting flat on the floor.",
                 "image":{
-                    "type":"fetchable",
-                    "imageName":"FingerToNose1",
-                    "placementType":"topBackground"
+                    "type":"animated",
+                    "imageNames":["FingerToNose0", "FingerToNose1"],
+                    "placementType":"topBackground",
+                    "animationDuration": 4,
+                    "animationRepeatCount": 1
                 },
                 "actions":{
                     "goForward":{
@@ -107,7 +85,7 @@
                  "identifier":"holdPhoneInstructions",
                  "type":"instruction",
                  "title":"Hold phone with index finger pointing out",
-                 "text":"Hold your phone with your pointer finger sticking out sideways from the phone",
+                 "text":"Hold your phone with your pointer finger sticking out sideways from the phone.",
                  "image":{
                      "type":"fetchable",
                      "imageName": "FingerToNose2",
@@ -129,8 +107,7 @@
                      "type":"animated",
                      "imageNames":["KineticHoldPhone-Left", "FingerToNose4", "FingerToNose5"],
                      "placementType":"topBackground",
-                     "animationDuration": 3,
-                     "animationRepeatCount": 3
+                     "animationDuration": 4
                  },
                  "actions":{
                      "goForward":{
@@ -153,7 +130,7 @@
                  "identifier":"completion",
                  "type":"completion",
                  "title":"Great job!",
-                 "text":"You just completed the Finger-to-Nose activity.",
+                 "text":"FINGER_TO_NOSE_COMPLETION",
                  "image":{
                      "type":"fetchable",
                      "imageName":"Completion-Tremor",
@@ -162,9 +139,6 @@
                  "viewTheme":{
                      "viewIdentifier":"Completion",
                      "storyboardIdentifier":"ActiveTaskSteps"
-                 },
-                 "spokenInstructions":{
-                     "start":"Great job! You just completed the Finger-to-Nose activity."
                  },
                  "actions": {
                      "goForward":{

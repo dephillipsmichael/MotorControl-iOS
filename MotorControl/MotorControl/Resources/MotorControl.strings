@@ -46,9 +46,9 @@
 
 "TAPPING_CONTINUE" = "Next";
 
-"TAPPING_COMPLETION_LEFT_UNIT_LABEL" = "LEFT HAND TAPS";
+"TAPPING_COMPLETION_LEFT_UNIT_LABEL" = "Left hand taps";
 
-"TAPPING_COMPLETION_RIGHT_UNIT_LABEL" = "RIGHT HAND TAPS";
+"TAPPING_COMPLETION_RIGHT_UNIT_LABEL" = "Right hand taps";
 
 "MOTION_SENSOR_REQUIRED_FOR_TASK_MESSAGE" = "This activity requires the use of the motion sensors and cannot continue without this permssion.";
 
@@ -58,3 +58,10 @@
 "WALK_BALANCE_COMPLETION" = "You have completed the Walk and Balance activity.";
 "TREMOR_COMPLETION_%@" = "You just completed your %@ Tremor Test activity.";
 "TREMOR_COMPLETION" = "You have completed the Tremor Test activity.";
+"FINGER_TO_NOSE_COMPLETION_%@" = "You just completed your %@ Finger-to-Nose activity.";
+"FINGER_TO_NOSE_COMPLETION" = "You have completed the Finger-to-Nose activity.";
+
+"HAND_SELECTION_TITLE" = "Which hands are you capable of doing this task with?";
+"HAND_SELECTION_CHOICE_RIGHT" = "I can only perform this activity with my RIGHT hand.";
+"HAND_SELECTION_CHOICE_LEFT" = "I can only perform this activity with my LEFT hand.";
+"HAND_SELECTION_CHOICE_BOTH" = "I can perform this activity with BOTH hands.";

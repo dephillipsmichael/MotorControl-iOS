@@ -81,20 +81,28 @@ public struct MCTTaskInfo : RSDTaskInfo, RSDEmbeddedIconVendor, RSDTaskDesign {
     }
     
     /// Default initializer.
-    public init(_ taskIdentifier: MCTTaskIdentifier) {
+    ///
+    /// - parameters:
+    ///     - taskIdentifier: The identifier for the activity to run.
+    ///     - overviewText: The text to display as the overview text for the task.
+    public init(_ taskIdentifier: MCTTaskIdentifier, overviewText: String? = nil) {
         self.taskIdentifier = taskIdentifier
         
         // Pull the title, subtitle, and detail from the first step in the task resource.
         let factory = (RSDFactory.shared as? MCTFactory) ?? MCTFactory()
         
         do {
-            let mTask = try factory.decodeTask(with: taskIdentifier.resourceTransformer())
+            let mTask = try factory.decodeTask(with: taskIdentifier.resourceTransformer(),
+                                               taskIdentifier: taskIdentifier.rawValue)
             self.task = mTask as! RSDTaskObject
         } catch let err {
             fatalError("Failed to decode the task. \(err)")
         }
         
         if let step = (task.stepNavigator as? RSDConditionalStepNavigator)?.steps.first as? RSDUIStep {
+            if let mutableStep = step as? RSDUIStepObject, let text = overviewText {
+                mutableStep.text = text
+            }
             self.title = step.title
             self.subtitle = step.text
             self.detail = step.detail

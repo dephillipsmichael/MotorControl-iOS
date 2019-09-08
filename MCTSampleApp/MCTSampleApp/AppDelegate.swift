@@ -44,6 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         RSDStudyConfiguration.shared.colorPalette = .beach
+        RSDStudyConfiguration.shared.fullInstructionsFrequency = .monthly
         
         return true
     }

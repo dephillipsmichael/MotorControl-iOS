@@ -59,4 +59,14 @@ class ResourceTests: XCTestCase {
         }
     }
     
+    func testDecodeDefaultTaskInfo() {
+        // Check that the JSON is decoding properly.
+        for taskIdentifier in MCTTaskIdentifier.allCases {
+            let taskInfo = MCTTaskInfo(taskIdentifier)
+            let task = taskInfo.task
+            XCTAssertTrue(task is MCTTaskObject)
+            XCTAssertEqual(task.identifier, taskIdentifier.rawValue)
+        }
+    }
+    
 }

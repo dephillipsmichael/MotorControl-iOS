@@ -1,1 +1,1 @@
-github "dephillipsmichael/SageResearch" "pku"
+github "Sage-Bionetworks/SageResearch" ~> 2.3
