@@ -15,11 +15,13 @@
                                 "reason":"Access to Motion and Fitness sensors is required to measure the phone's steadiness in your hand."
                                }
                             ],
-                 "image":{
-                     "type":"fetchable",
-                     "imageName":"FingerToNose9",
-                     "placementType":"topBackground"
-                 },
+                "image":{
+                    "type":"animated",
+                    "imageNames":["KineticHoldPhone-Left", "FingerToNose4", "FingerToNose5"],
+                    "placementType":"topBackground",
+                    "animationDuration": 4,
+                    "animationRepeatCount": 1
+                },
                 "icons": [
                           {
                             "icon":"SpaceToMoveYourArmsRose",
@@ -47,9 +49,11 @@
                  "title":"Each hand for 30 seconds",
                  "text":"We will do this finger-to-nose motion repeatedly for 30 seconds with one hand, and then for 30 seconds with your other hand.",
                  "image":{
-                     "type":"fetchable",
-                     "imageName": "FingerToNose4",
-                     "placementType":"topBackground"
+                     "type":"animated",
+                     "imageNames":["KineticHoldPhone-Left", "FingerToNose4", "FingerToNose5"],
+                     "placementType":"topBackground",
+                     "animationDuration": 4,
+                     "animationRepeatCount": 1
                  },
                  "actions":{
                      "goForward":{
@@ -68,11 +72,9 @@
                 "title":"Sit down",
                 "text":"Find a spot to sit where you can have your feet resting flat on the floor.",
                 "image":{
-                    "type":"animated",
-                    "imageNames":["FingerToNose0", "FingerToNose1"],
-                    "placementType":"topBackground",
-                    "animationDuration": 4,
-                    "animationRepeatCount": 1
+                    "type":"fetchable",
+                    "imageName":"FingerToNose1",
+                    "placementType":"topBackground"
                 },
                 "actions":{
                     "goForward":{
