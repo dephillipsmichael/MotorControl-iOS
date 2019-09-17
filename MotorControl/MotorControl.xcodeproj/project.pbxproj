@@ -385,7 +385,6 @@
 		F8E3B80921BB46250004284E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				CBD18B0B23144E1700846B9E /* RestingKineticTremor.json */,
 				FF89CC6023024FB9003676F8 /* Images */,
 				CB60DDCE22AB0EE500CD34C7 /* MP4 */,
 				F8E3B80D21BB46590004284E /* ActiveTaskSteps.storyboard */,
@@ -393,7 +392,6 @@
 				F8E3B80E21BB46590004284E /* MotorControl.strings */,
 				F8E3B81121BB46590004284E /* Finger_Tapping.json */,
 				CB60DDC422AABE9800CD34C7 /* Kinetic_Tremor.json */,
-				CB60DDCC22AB082B00CD34C7 /* KineticTremorSectionStep.json */,
 				F8E3B80B21BB46590004284E /* TappingSectionStep.json */,
 				F8E3B80C21BB46590004284E /* Tremor.json */,
 				F8E3B80F21BB46590004284E /* TremorSectionStep.json */,
@@ -401,6 +399,8 @@
 				4498285A21F5216300C1A8C3 /* Walk_30seconds.json */,
 				FFBBABDE22D3E21F00978A9B /* WalkSectionStep.json */,
 				FFBBABDD22D3E21F00978A9B /* BalanceSectionStep.json */,
+				CBD18B0B23144E1700846B9E /* RestingKineticTremor.json */,
+				CB60DDCC22AB082B00CD34C7 /* KineticTremorSectionStep.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
