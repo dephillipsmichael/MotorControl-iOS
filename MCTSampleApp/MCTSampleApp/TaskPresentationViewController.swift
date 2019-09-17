@@ -34,6 +34,7 @@
 import UIKit
 import ResearchUI
 import Research
+import MotorControl
 
 /// The data storage manager in this case is used to show a sample usage. As such, the data will not be
 /// shared to user defaults but only in local memory.
@@ -85,6 +86,9 @@ class TaskPresentationViewController: UITableViewController, RSDTaskViewControll
             vc.title = self.title
             vc.navigationItem.title = vc.title
         }
+        else if let vc = segue.destination as? ErrorViewController, let error = sender as? String {
+            vc.error = error
+        }
     }
     
     // MARK: - RSDTaskControllerDelegate
@@ -118,13 +122,98 @@ class TaskPresentationViewController: UITableViewController, RSDTaskViewControll
     func taskController(_ taskController: RSDTaskController, readyToSave taskViewModel: RSDTaskViewModel) {
         print("\n\n=== Ready to Save: \(taskViewModel.description)")
         
-        taskViewModel.archiveResults(with: self.archiveManager) { (error) in
-            print("Archive complete with \(self.archiveManager.dataArchives.count) archives. error:\(String(describing: error))")
+        // Inspect the result.
+        self.inspectResult(taskViewModel.taskResult)
+        
+        taskViewModel.archiveResults(with: self.archiveManager) { _ in
+            // The archive manager does not call completion because that deletes the result
+            // and then the result cannot be displayed. Therefore, this completion handler
+            // is never called. syoung 09/17/2019
         }
     }
     
     func taskViewController(_ taskViewController: UIViewController, shouldShowTaskInfoFor step: Any) -> Bool {
         // TODO: syoung 01/18/2019 clean up JSON and Factory stuff for showing the intro step.
         return false
+    }
+    
+    // MARK: Custom code for inspecting the motion control tasks.
+    
+    func inspectResult(_ taskResult: RSDTaskResult) {
+        guard let taskIdentifier = MCTTaskIdentifier(rawValue: taskResult.identifier)
+            else {
+                showError("Task identifier not recognized. \(taskResult.identifier)")
+                return
+        }
+        DispatchQueue.global().async {
+            // Inspect the results for expected values.
+            switch taskIdentifier {
+            case .kineticTremor, .tapping, .tremor:
+                self.inspectTwoHandTaskResult(taskIdentifier: taskIdentifier, taskResult: taskResult)
+            case .walk30Seconds, .walkAndBalance:
+                self.inspectWalkTaskResult(taskIdentifier: taskIdentifier, taskResult: taskResult)
+            }
+        }
+    }
+    
+    func inspectTwoHandTaskResult(taskIdentifier: MCTTaskIdentifier, taskResult: RSDTaskResult) {
+        guard let handSelectionResult = taskResult.findResult(with: MCTHandSelectionDataSource.selectionKey) as? RSDCollectionResult,
+            let handOrder = handSelectionResult.findAnswerResult(with: MCTHandSelectionDataSource.handOrderKey)?.value as? [String]
+            else {
+                showError("Could not find expected hand selection result in \(taskResult)")
+                return
+        }
+        self.inspectMotionRecords(for: handOrder, in: taskResult)
+    }
+    
+    func inspectWalkTaskResult(taskIdentifier: MCTTaskIdentifier, taskResult: RSDTaskResult) {
+        let resultIds = (taskIdentifier == .walkAndBalance) ? ["walk","balance"] : ["walk"]
+        self.inspectMotionRecords(for: resultIds, in: taskResult)
+    }
+    
+    func inspectMotionRecords(for identifiers: [String], in taskResult: RSDTaskResult) {
+        for identifier in identifiers {
+            guard let sectionResult = taskResult.findResult(with: identifier) as? RSDTaskResult
+                else {
+                    showError("Missing section result for \(identifier) in \(taskResult)")
+                    return
+            }
+            guard let motionResult = sectionResult.asyncResults?.first(where: { $0.identifier == "motion" }) as? RSDFileResult
+                else {
+                    showError("Missing motion result for \(sectionResult.identifier) in \(sectionResult)")
+                    return
+            }
+            guard let url = motionResult.url
+                else {
+                    showError("The motion result for \(sectionResult.identifier) did not have a url")
+                    return
+            }
+            do {
+                let jsonDecoder = MCTFactory.shared.createJSONDecoder()
+                let data = try Data(contentsOf: url)
+                let records = try jsonDecoder.decode([RSDMotionRecord].self, from: data)
+                guard let startTime = records.first?.timestamp, let endTime = records.last?.timestamp
+                    else {
+                        showError("The motion result for \(sectionResult.identifier) was empty")
+                        return
+                }
+                let delta = endTime - startTime
+                if delta < 29.0 || delta > 35.0 {
+                    showError("The delta time for the recording was not within expected bounds. delta=\(delta), startTime=\(startTime), endTime=\(endTime)")
+                }
+                else {
+                    print("\(identifier)_motion=\(delta)")
+                }
+            }
+            catch let err {
+                showError("Failed to decode the motion record for \(sectionResult.identifier): \(err)")
+            }
+        }
+    }
+    
+    func showError(_ error: String) {
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "showError", sender: error)
+        }
     }
 }

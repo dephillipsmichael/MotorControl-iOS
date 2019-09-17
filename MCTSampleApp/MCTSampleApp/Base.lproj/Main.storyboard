@@ -142,6 +142,9 @@
                             <outlet property="delegate" destination="1eZ-du-mtE" id="n0p-V0-Tyq"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="Wv0-Vd-271" kind="show" identifier="showError" id="eA5-XV-Prf"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0rN-Ty-P93" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -319,6 +322,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XII-Oc-wgs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3619" y="125"/>
+        </scene>
+        <!--Error View Controller-->
+        <scene sceneID="4h4-sO-Ol0">
+            <objects>
+                <viewController storyboardIdentifier="ErrorViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wv0-Vd-271" customClass="ErrorViewController" customModule="MCTSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D15-BW-TMC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6RN-6G-DYK">
+                                <rect key="frame" x="16" y="80" width="288" height="468"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kEc-3X-d2S" firstAttribute="bottom" secondItem="6RN-6G-DYK" secondAttribute="bottom" constant="20" id="QMB-x8-nHz"/>
+                            <constraint firstItem="kEc-3X-d2S" firstAttribute="trailing" secondItem="6RN-6G-DYK" secondAttribute="trailing" constant="16" id="R3F-rD-K7D"/>
+                            <constraint firstItem="6RN-6G-DYK" firstAttribute="leading" secondItem="kEc-3X-d2S" secondAttribute="leading" constant="16" id="b1p-ox-wYL"/>
+                            <constraint firstItem="6RN-6G-DYK" firstAttribute="top" secondItem="kEc-3X-d2S" secondAttribute="top" constant="16" id="f3O-OJ-Wkz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kEc-3X-d2S"/>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="6RN-6G-DYK" id="rpj-xX-hwN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sqb-1L-FWj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2581.875" y="1112.323943661972"/>
         </scene>
         <!--Task Archives Table View Controller-->
         <scene sceneID="Y8J-Ac-DAP">
