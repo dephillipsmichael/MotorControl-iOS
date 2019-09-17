@@ -68,7 +68,7 @@
             "text":"While sitting down with your feet resting flat on the floor, please hold the phone still in your lap for 30 seconds. You will do this first with one hand and then with your other hand if you can.",
             "image":{
                 "type":"fetchable",
-                "imageName": "F-TremorHoldPhone",
+                "imageName": "TremorHoldPhone",
                 "placementType":"topBackground"
             },
             "actions":{
@@ -85,7 +85,7 @@
             "text":"Find a spot to sit where you can have your feet resting flat on the floor.",
             "image":{
                 "type":"fetchable",
-                "imageName":"F-Sitting",
+                "imageName":"Sitting",
                 "placementType":"topBackground"
             },
             "actions":{
