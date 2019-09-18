@@ -26,6 +26,7 @@
 		F82CEF2B227AB675000485C8 /* ResearchUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F82CEF29227AB675000485C8 /* ResearchUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F8E12677228E346400AE37E1 /* ResearchMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E12676228E346400AE37E1 /* ResearchMotion.framework */; };
 		F8E12678228E346400AE37E1 /* ResearchMotion.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F8E12676228E346400AE37E1 /* ResearchMotion.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FF98B2AA2331B90D00FA1EDB /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF98B2A92331B90D00FA1EDB /* ErrorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		F82CEF26227AB675000485C8 /* Research.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Research.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F82CEF29227AB675000485C8 /* ResearchUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ResearchUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8E12676228E346400AE37E1 /* ResearchMotion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ResearchMotion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF98B2A92331B90D00FA1EDB /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,9 +125,10 @@
 			children = (
 				F82CEEEF227AB136000485C8 /* AppDelegate.swift */,
 				F82CEF1C227AB462000485C8 /* ArchiveManager.swift */,
-				F82CEF1B227AB462000485C8 /* TaskArchivesTableViewController.swift */,
+				FF98B2A92331B90D00FA1EDB /* ErrorViewController.swift */,
 				F82CEF13227AB1E0000485C8 /* FileResultViewController.swift */,
 				F82CEF12227AB1DF000485C8 /* ResultTableViewController.swift */,
+				F82CEF1B227AB462000485C8 /* TaskArchivesTableViewController.swift */,
 				F82CEF14227AB1E0000485C8 /* TaskPresentationViewController.swift */,
 				F82CEF15227AB1E0000485C8 /* TaskTableViewController.swift */,
 				F82CEEF3227AB136000485C8 /* Main.storyboard */,
@@ -268,6 +271,7 @@
 				F82CEEF0227AB136000485C8 /* AppDelegate.swift in Sources */,
 				F82CEF1D227AB462000485C8 /* TaskArchivesTableViewController.swift in Sources */,
 				F82CEF16227AB1E0000485C8 /* ResultTableViewController.swift in Sources */,
+				FF98B2AA2331B90D00FA1EDB /* ErrorViewController.swift in Sources */,
 				F82CEF17227AB1E0000485C8 /* FileResultViewController.swift in Sources */,
 				F82CEF1E227AB462000485C8 /* ArchiveManager.swift in Sources */,
 			);
